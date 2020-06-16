@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +14,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vkL-Qt-qMf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0kL-aP-uHc">
+                                <rect key="frame" x="87" y="144" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="az7-bb-7pk"/>
+                                    <constraint firstAttribute="width" constant="240" id="z4b-vF-XaN"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ktv-c5-tgq">
+                                <rect key="frame" x="71" y="372" width="272" height="120"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="HAL-T8-lLt">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="QWG-zf-8Mk"/>
+                                            <constraint firstAttribute="height" constant="120" id="Rsb-8g-Cwc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="iQQ-st-wha">
+                                        <rect key="frame" x="152" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="PV8-zP-3nP"/>
+                                            <constraint firstAttribute="height" constant="120" id="k4a-Zc-gEG"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUA-Uu-jiZ">
+                                <rect key="frame" x="143" y="642" width="128" height="64"/>
+                                <color key="backgroundColor" red="0.60707634690000001" green="0.110588558" blue="0.1215160117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Tpo-k1-MM0"/>
+                                    <constraint firstAttribute="width" constant="128" id="oHi-dg-jeD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Roll">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ktv-c5-tgq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7IC-s2-juJ"/>
+                            <constraint firstItem="vkL-Qt-qMf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bxm-D3-c8Q"/>
+                            <constraint firstItem="0kL-aP-uHc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Cfl-zS-sNt"/>
+                            <constraint firstAttribute="bottom" secondItem="vkL-Qt-qMf" secondAttribute="bottom" id="FR7-Y4-bbW"/>
+                            <constraint firstItem="vkL-Qt-qMf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FhN-hD-NTi"/>
+                            <constraint firstItem="tUA-Uu-jiZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T62-xb-o4E"/>
+                            <constraint firstItem="0kL-aP-uHc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W9O-07-Kpp"/>
+                            <constraint firstItem="vkL-Qt-qMf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZgK-X6-5vs"/>
+                            <constraint firstItem="tUA-Uu-jiZ" firstAttribute="top" secondItem="ktv-c5-tgq" secondAttribute="bottom" constant="150" id="ca5-45-ml1"/>
+                            <constraint firstItem="ktv-c5-tgq" firstAttribute="top" secondItem="0kL-aP-uHc" secondAttribute="bottom" constant="100" id="oo1-Fd-OI0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -23,4 +78,10 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DiceOne" width="100" height="100"/>
+        <image name="DiceTwo" width="100" height="100"/>
+        <image name="DiceeLogo" width="196" height="128"/>
+        <image name="GreenBackground" width="444.5" height="414"/>
+    </resources>
 </document>

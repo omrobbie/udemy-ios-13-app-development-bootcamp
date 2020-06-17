@@ -8,3 +8,7 @@ Materi selengkapnya ada di https://www.udemy.com/course/ios-13-app-development-b
 ### 2. Dicee
 <p>Learn about connecting label and image to code with IBOutlet and IBAction, and get random number.</p>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Dicee-iOS13/screenshot/preview.png" width=256 />
+
+### 3. Magic 8 Ball
+<p>Learn about connecting label and image to code with IBOutlet and IBAction, and get random number.</p>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Magic-8-Ball-iOS13/screenshot/preview.png" width=256 />

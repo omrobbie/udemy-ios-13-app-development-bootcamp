@@ -13,12 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgDice1: UIImageView!
     @IBOutlet weak var imgDice2: UIImageView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     @IBAction func btnRollTapped(_ sender: Any) {
-        imgDice1.image = #imageLiteral(resourceName: "DiceFour")
-        imgDice2.image = #imageLiteral(resourceName: "DiceThree")
+        let diceArray = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
+
+        imgDice1.image = diceArray[Int.random(in: 0...5)]
+        imgDice2.image = diceArray.randomElement()
     }
 }

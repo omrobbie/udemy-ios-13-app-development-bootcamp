@@ -24,6 +24,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnKeyTapped(_ sender: UIButton) {
-        playSound(soundName: sender.currentTitle!)
+        UIView.animate(withDuration: 0.2, animations: {
+            sender.alpha = 0.7
+            self.playSound(soundName: sender.currentTitle!)
+        }) { _ in
+            sender.alpha = 1
+        }
     }
 }

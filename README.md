@@ -22,3 +22,7 @@ Learn about Size Classes and Auto Layout.<br>
 Learn about Auto Layout, Stack View on calculator layout.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Calculator-Layout-iOS13/screenshot/preview1.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Calculator-Layout-iOS13/screenshot/preview2.png" width=512 />&nbsp;
+
+### 6. Xylophone
+Learn about AVFoundation, playing sounds<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Xylophone-iOS13/screenshot/preview.png" width=256 />

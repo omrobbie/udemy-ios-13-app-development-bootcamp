@@ -12,3 +12,8 @@ Materi selengkapnya ada di https://www.udemy.com/course/ios-13-app-development-b
 ### 3. Magic 8 Ball
 <p>Learn about connecting label and image to code with IBOutlet and IBAction, and get random number.</p>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Magic-8-Ball-iOS13/screenshot/preview.png" width=256 />
+
+### 3. Auto Layout
+<p>Learn about Size Classes and Auto Layout.</p>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/AutoLayout-iOS13/screenshot/preview1.png" width=256 />
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/AutoLayout-iOS13/screenshot/preview2.png" width=512 />

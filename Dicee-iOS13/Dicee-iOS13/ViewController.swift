@@ -19,4 +19,8 @@ class ViewController: UIViewController {
         imgDice1.image = #imageLiteral(resourceName: "DiceSix")
         imgDice2.image = #imageLiteral(resourceName: "DiceFive")
     }
+
+    @IBAction func btnRollTapped(_ sender: Any) {
+        print("Button got tapped.")
+    }
 }

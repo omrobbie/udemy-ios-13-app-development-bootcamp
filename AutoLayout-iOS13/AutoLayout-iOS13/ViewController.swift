@@ -21,6 +21,4 @@ class ViewController: UIViewController {
         diceImageView2.image = allDice[Int.random(in: 0...5)]
         
     }
-    
 }
-

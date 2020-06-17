@@ -36,9 +36,12 @@
                                     <constraint firstAttribute="height" constant="64" id="mxS-RQ-ne8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                <state key="normal" title="Ask">
+                                <state key="normal" title="Answer">
                                     <color key="titleColor" red="0.3849637508" green="0.80531096459999996" blue="0.9965733886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnAnswerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XbX-7G-tUy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3849637508" green="0.80531096459999996" blue="0.9965733886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,6 +55,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imgAnswer" destination="Cka-9N-wBZ" id="bJq-0t-Bal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

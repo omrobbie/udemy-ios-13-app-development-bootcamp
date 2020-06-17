@@ -15,12 +15,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imgDice1.image = #imageLiteral(resourceName: "DiceSix")
-        imgDice2.image = #imageLiteral(resourceName: "DiceFive")
     }
 
     @IBAction func btnRollTapped(_ sender: Any) {
-        print("Button got tapped.")
+        imgDice1.image = #imageLiteral(resourceName: "DiceFour")
+        imgDice2.image = #imageLiteral(resourceName: "DiceThree")
     }
 }

@@ -37,8 +37,10 @@ class ViewController: UIViewController {
         updateUI()
     }
     
-    func updateUI() {
+    @objc func updateUI() {
         lblQuestion.text = quiz[questionNumber].question
+        btnTrue.backgroundColor = .clear
+        btnFalse.backgroundColor = .clear
     }
     
     @IBAction func btnAnswerTapped(_ sender: UIButton) {
@@ -46,9 +48,9 @@ class ViewController: UIViewController {
         let actualAnswer = quiz[questionNumber].answer
         
         if userAnswer == actualAnswer {
-            print("Right!")
+            sender.backgroundColor = .systemGreen
         } else {
-            print("Wrong!")
+            sender.backgroundColor = .systemRed
         }
         
         if questionNumber < quiz.count - 1 {
@@ -56,7 +58,7 @@ class ViewController: UIViewController {
         } else {
             questionNumber = 0
         }
-        
-        updateUI()
+
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
 }

@@ -24,10 +24,12 @@ class ViewController: UIViewController {
     
     @objc func updateUI() {
         lblQuestion.text = quizBrain.getQuestionText()
+        progressBar.progress = quizBrain.getProgress()
+
         btnTrue.backgroundColor = .clear
         btnFalse.backgroundColor = .clear
     }
-    
+
     @IBAction func btnAnswerTapped(_ sender: UIButton) {
         let userAnswer = sender.currentTitle!
         let userGotItRight = quizBrain.checkAnswer(userAnswer)

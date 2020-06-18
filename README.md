@@ -26,3 +26,7 @@ Learn about Auto Layout, Stack View on calculator layout.<br>
 ### 6. Xylophone
 Learn about AVFoundation, playing sounds<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Xylophone-iOS13/screenshot/preview.png" width=256 />
+
+### 7. Egg Timer
+Learn about Timer<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/EggTimer-iOS13/screenshot/preview.png" width=256 />

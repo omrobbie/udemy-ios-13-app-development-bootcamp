@@ -24,9 +24,14 @@ Learn about Auto Layout, Stack View on calculator layout.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Calculator-Layout-iOS13/screenshot/preview2.png" width=512 />&nbsp;
 
 ### 6. Xylophone
-Learn about AVFoundation, playing sounds<br>
+Learn about AVFoundation, playing sounds.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Xylophone-iOS13/screenshot/preview.png" width=256 />
 
 ### 7. Egg Timer
-Learn about Timer<br>
+Learn about Timer.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/EggTimer-iOS13/screenshot/preview.png" width=256 />
+
+### 8. Quizzler
+Learn about struct as data model, create properties and methods.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Quizzler-iOS13/screenshot/preview1.png" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Quizzler-iOS13/screenshot/preview2.png" width=256 />

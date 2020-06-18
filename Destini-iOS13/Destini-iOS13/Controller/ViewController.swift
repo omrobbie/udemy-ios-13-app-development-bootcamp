@@ -28,7 +28,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnAnswerTapped(_ sender: UIButton) {
-        storyBrain.nextStory()
+        let userChoice = sender.currentTitle!
+        storyBrain.nextStory(userChoice)
         updateUI()
     }
 }

@@ -24,9 +24,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+    }
 
+    func updateUI() {
         storyLabel.text = story[storyNumber].title
         choice1Button.setTitle(story[storyNumber].choice1, for: .normal)
         choice2Button.setTitle(story[storyNumber].choice2, for: .normal)
+    }
+
+    @IBAction func btnAnswerTapped(_ sender: UIButton) {
+        storyNumber += 1
+        updateUI()
     }
 }

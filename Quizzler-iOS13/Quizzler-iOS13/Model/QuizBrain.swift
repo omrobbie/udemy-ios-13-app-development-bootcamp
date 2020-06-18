@@ -1,21 +1,16 @@
 //
-//  ViewController.swift
+//  QuizBrain.swift
 //  Quizzler-iOS13
 //
-//  Created by Angela Yu on 12/07/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
+//  Created by omrobbie on 18/06/20.
+//  Copyright © 2020 The App Brewery. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    @IBOutlet weak var lblQuestion: UILabel!
-    @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var btnTrue: UIButton!
-    @IBOutlet weak var btnFalse: UIButton!
-    
-    let quiz = [
+struct QuizBrain {
+
+    private let quiz = [
         Question(q: "A slug's blood is green.", a: "True"),
         Question(q: "Approximately one quarter of human bones are in the feet.", a: "True"),
         Question(q: "The total surface area of two human lungs is approximately 70 square metres.", a: "True"),
@@ -29,36 +24,22 @@ class ViewController: UIViewController {
         Question(q: "No piece of square dry paper can be folded in half more than 7 times.", a: "False"),
         Question(q: "Chocolate affects a dog's heart and nervous system; a few ounces are enough to kill a small dog.", a: "True")
     ]
-    
-    var questionNumber = 0
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateUI()
+
+    private var questionNumber = 0
+
+    func getQuestionText() -> String {
+        return quiz[questionNumber].question
     }
-    
-    @objc func updateUI() {
-        lblQuestion.text = quiz[questionNumber].question
-        btnTrue.backgroundColor = .clear
-        btnFalse.backgroundColor = .clear
+
+    func checkAnswer(_ userAnswer: String) -> Bool {
+        return userAnswer == quiz[questionNumber].answer
     }
-    
-    @IBAction func btnAnswerTapped(_ sender: UIButton) {
-        let userAnswer = sender.currentTitle!
-        let actualAnswer = quiz[questionNumber].answer
-        
-        if userAnswer == actualAnswer {
-            sender.backgroundColor = .systemGreen
-        } else {
-            sender.backgroundColor = .systemRed
-        }
-        
+
+    mutating func nextQuesttion() {
         if questionNumber < quiz.count - 1 {
             questionNumber += 1
         } else {
             questionNumber = 0
         }
-
-        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
 }

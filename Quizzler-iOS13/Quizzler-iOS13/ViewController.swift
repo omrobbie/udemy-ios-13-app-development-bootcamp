@@ -15,11 +15,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnTrue: UIButton!
     @IBOutlet weak var btnFalse: UIButton!
 
+    let quiz = [
+        "Four + Two is equal to Six",
+        "Five - Three is greater than One",
+        "Three + Eight is less than Ten",
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblQuestion.text = quiz.randomElement()
     }
 
     @IBAction func btnAnswerTapped(_ sender: UIButton) {
-        
+
     }
 }

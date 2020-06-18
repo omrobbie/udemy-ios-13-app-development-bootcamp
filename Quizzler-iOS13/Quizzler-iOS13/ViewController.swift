@@ -21,12 +21,19 @@ class ViewController: UIViewController {
         "Three + Eight is less than Ten",
     ]
 
+    var questionNumber = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblQuestion.text = quiz.randomElement()
+        updateUI()
+    }
+
+    func updateUI() {
+        lblQuestion.text = quiz[questionNumber]
     }
 
     @IBAction func btnAnswerTapped(_ sender: UIButton) {
-
+        questionNumber += 1
+        updateUI()
     }
 }

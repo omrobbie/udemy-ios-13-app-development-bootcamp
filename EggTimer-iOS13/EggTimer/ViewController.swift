@@ -10,4 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func btnHardnessTapped(_ sender: UIButton) {
+        print(sender.currentTitle!)
+    }
 }

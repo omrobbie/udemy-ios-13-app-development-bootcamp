@@ -40,6 +40,9 @@
                                         <state key="normal" title="True" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnAnswerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5s6-Sf-tJF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbn-vQ-GyC">
                                         <rect key="frame" x="0.0" y="718" width="374" height="80"/>
@@ -77,6 +80,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnFalse" destination="tbn-vQ-GyC" id="6CG-09-2Dw"/>
+                        <outlet property="btnTrue" destination="oVw-Hl-IRe" id="Rza-I3-cje"/>
+                        <outlet property="lblQuestion" destination="rSI-li-mhO" id="zZa-0r-MA5"/>
+                        <outlet property="progressBar" destination="TXm-qh-7Xg" id="ViQ-Vx-6hV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

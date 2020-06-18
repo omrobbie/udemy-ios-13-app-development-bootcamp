@@ -35,3 +35,7 @@ Learn about Timer.<br>
 Learn about struct as data model, create properties and methods.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Quizzler-iOS13/screenshot/preview1.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Quizzler-iOS13/screenshot/preview2.png" width=256 />
+
+### 8. Destini
+Learn about struct as data model, create properties and methods.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Destini-iOS13/screenshot/preview.png" width=256 />

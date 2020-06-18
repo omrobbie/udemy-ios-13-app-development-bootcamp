@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var lblTitle: UILabel!
-
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     let eggTimes = ["Soft": 3, "Medium": 4, "Hard": 5]
 
     var secondsRemaining = 60

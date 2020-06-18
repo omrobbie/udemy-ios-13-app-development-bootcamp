@@ -13,8 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var lblQuestion: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var btnTrue: UIButton!
-    @IBOutlet weak var btnFalse: UIButton!
+    @IBOutlet weak var btnChoice1: UIButton!
+    @IBOutlet weak var btnChoice2: UIButton!
+    @IBOutlet weak var btnChoice3: UIButton!
 
     var quizBrain = QuizBrain()
     
@@ -28,8 +29,14 @@ class ViewController: UIViewController {
         lblQuestion.text = quizBrain.getQuestionText()
         progressBar.progress = quizBrain.getProgress()
 
-        btnTrue.backgroundColor = .clear
-        btnFalse.backgroundColor = .clear
+        btnChoice1.setTitle(quizBrain.getChoices(choiceNumber: 1), for: .normal)
+        btnChoice1.backgroundColor = .clear
+
+        btnChoice2.setTitle(quizBrain.getChoices(choiceNumber: 2), for: .normal)
+        btnChoice2.backgroundColor = .clear
+
+        btnChoice3.setTitle(quizBrain.getChoices(choiceNumber: 3), for: .normal)
+        btnChoice3.backgroundColor = .clear
     }
 
     @IBAction func btnAnswerTapped(_ sender: UIButton) {

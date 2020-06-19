@@ -40,6 +40,8 @@ class CalculatorViewController: UIViewController {
             tipValue = 0.0
             btnTip0.isSelected = true
         }
+
+        txtBill.endEditing(true)
     }
 
     @IBAction func stpSplitChanged(_ sender: Any) {
@@ -47,7 +49,12 @@ class CalculatorViewController: UIViewController {
     }
 
     @IBAction func btnCalculateTapped(_ sender: Any) {
-        print(tipValue)
+        let bill = txtBill.text ?? "0"
+        let billValue = Double(bill) ?? 0
+        let result = (billValue + (billValue * tipValue)) / stpSplit.value
+
+        print(result)
+
         performSegue(withIdentifier: "goToResult", sender: self)
     }
 }

@@ -26,10 +26,20 @@ struct WeatherManager {
                 }
 
                 if let data = data {
-                    let dataString = String(data: data, encoding: .utf8)
-                    print(dataString)
+                    self.parseJSON(weatherData: data)
                 }
             }.resume()
+        }
+    }
+
+    func parseJSON(weatherData: Data) {
+        let decoder = JSONDecoder()
+
+        do {
+            let decodeData = try decoder.decode(WeatherData.self, from: weatherData)
+            print(decodeData.name)
+        } catch {
+            print(error.localizedDescription)
         }
     }
 }

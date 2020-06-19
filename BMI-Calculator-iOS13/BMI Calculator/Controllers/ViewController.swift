@@ -15,8 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderHeight: UISlider!
     @IBOutlet weak var sliderWeight: UISlider!
 
+    var bmiValue = "0.0"
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! SecondViewController
+            destinationVC.bmiValue = bmiValue
+        }
     }
 
     @IBAction func sliderHeightChanged(_ sender: UISlider) {
@@ -34,9 +43,8 @@ class ViewController: UIViewController {
         let weight = sliderWeight.value
 
         let bmi = weight / pow(height, 2)
-        print(bmi)
+        bmiValue = "\(bmi)"
 
-        let vc = SecondViewController()
-        present(vc, animated: true)
+        performSegue(withIdentifier: "goToResult", sender: self)
     }
 }

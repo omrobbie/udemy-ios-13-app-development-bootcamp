@@ -17,10 +17,22 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var lblSplit: UILabel!
     @IBOutlet weak var stpSplit: UIStepper!
 
-    var tipValue = 0.0
+    var tipValue: Double = 0.0
+    var result: Double = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            let people = String(format: "%.0f", stpSplit.value)
+            let tip = String(format: "%.0f", tipValue * 100)
+            destinationVC.total = result
+            destinationVC.people = people
+            destinationVC.tip = tip
+        }
     }
 
     @IBAction func btnTipTapped(_ sender: UIButton) {
@@ -51,10 +63,8 @@ class CalculatorViewController: UIViewController {
     @IBAction func btnCalculateTapped(_ sender: Any) {
         let bill = txtBill.text ?? "0"
         let billValue = Double(bill) ?? 0
-        let result = (billValue + (billValue * tipValue)) / stpSplit.value
 
-        print(result)
-
+        result = (billValue + (billValue * tipValue)) / stpSplit.value
         performSegue(withIdentifier: "goToResult", sender: self)
     }
 }

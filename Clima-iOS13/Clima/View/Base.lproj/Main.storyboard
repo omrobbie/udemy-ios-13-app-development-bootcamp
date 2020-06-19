@@ -123,12 +123,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="1377" height="1377"/>
+        <image name="background" width="662" height="662"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
         <namedColor name="weatherColor">
-            <color red="0.1068351939" green="0.26235985760000002" blue="0.28235909339999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.10700000077486038" green="0.26199999451637268" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

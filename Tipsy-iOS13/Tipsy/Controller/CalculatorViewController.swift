@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalculatorViewController.swift
 //  Tipsy
 //
 //  Created by Angela Yu on 09/09/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var txtBill: UITextField!
     @IBOutlet weak var btnTip0: UIButton!
@@ -27,5 +27,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnCalculateTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goToResult", sender: self)
     }
 }

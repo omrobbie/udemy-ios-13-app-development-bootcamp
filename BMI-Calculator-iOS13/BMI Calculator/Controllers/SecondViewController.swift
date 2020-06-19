@@ -16,4 +16,8 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         print(bmiValue)
     }
+
+    @IBAction func btnRecalculateTapped(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

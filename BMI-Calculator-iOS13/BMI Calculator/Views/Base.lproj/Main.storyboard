@@ -187,6 +187,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnRecalculateTapped:" destination="lkq-xS-Cin" eventType="touchUpInside" id="b4O-d8-obJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.19980379940000001" green="0.48169642689999997" blue="0.77313679459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

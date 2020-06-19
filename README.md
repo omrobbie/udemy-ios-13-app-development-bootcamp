@@ -39,3 +39,8 @@ Learn about struct as data model, create properties and methods.<br>
 ### 8. Destini
 Learn about struct as data model, create properties and methods.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Destini-iOS13/screenshot/preview.png" width=256 />
+
+### 9. BMI Calculator
+Learn about struct as data model, create properties and methods.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/BMI-Calculator-iOS13/screenshot/preview1.png" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/BMI-Calculator-iOS13/screenshot/preview2.png" width=256 />

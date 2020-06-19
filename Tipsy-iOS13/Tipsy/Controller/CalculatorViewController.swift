@@ -20,7 +20,20 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func btnTipTapped(_ sender: Any) {
+    @IBAction func btnTipTapped(_ sender: UIButton) {
+        btnTip0.isSelected = false
+        btnTip10.isSelected = false
+        btnTip20.isSelected = false
+
+        let tip = sender.currentTitle!
+
+        if tip == "10%" {
+            btnTip10.isSelected = true
+        } else if tip == "20%" {
+            btnTip20.isSelected = true
+        } else {
+            btnTip0.isSelected = true
+        }
     }
 
     @IBAction func stpSplitChanged(_ sender: Any) {

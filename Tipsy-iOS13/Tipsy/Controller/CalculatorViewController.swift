@@ -15,6 +15,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var btnTip10: UIButton!
     @IBOutlet weak var btnTip20: UIButton!
     @IBOutlet weak var lblSplit: UILabel!
+    @IBOutlet weak var stpSplit: UIStepper!
 
     var tipValue = 0.0
 
@@ -42,6 +43,7 @@ class CalculatorViewController: UIViewController {
     }
 
     @IBAction func stpSplitChanged(_ sender: Any) {
+        lblSplit.text = String(format: "%.0f", stpSplit.value)
     }
 
     @IBAction func btnCalculateTapped(_ sender: Any) {

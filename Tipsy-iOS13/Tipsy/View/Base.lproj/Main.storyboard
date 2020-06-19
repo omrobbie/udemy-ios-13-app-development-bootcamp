@@ -202,6 +202,7 @@
                         <outlet property="btnTip10" destination="7y6-Kf-yF0" id="Ddk-nv-HYg"/>
                         <outlet property="btnTip20" destination="UtR-dU-EKt" id="G3H-Mw-kM0"/>
                         <outlet property="lblSplit" destination="bSy-Yc-886" id="4rz-Kw-Mxf"/>
+                        <outlet property="stpSplit" destination="haq-5m-pqs" id="K0H-Km-L1P"/>
                         <outlet property="txtBill" destination="wcN-ka-Q4F" id="6tQ-Sa-3Du"/>
                         <segue destination="Dnf-m2-FPm" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" id="dYc-ak-7YC"/>
                     </connections>

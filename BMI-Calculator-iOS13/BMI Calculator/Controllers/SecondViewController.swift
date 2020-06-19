@@ -10,11 +10,19 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    var bmiValue = "0.0"
+    @IBOutlet weak var lblBMI: UILabel!
+    @IBOutlet weak var lblAdvice: UILabel!
+
+    var bmiValue: String?
+    var advice: String?
+    var color: UIColor?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(bmiValue)
+
+        lblBMI.text = bmiValue
+        lblAdvice.text = advice
+        view.backgroundColor = color
     }
 
     @IBAction func btnRecalculateTapped(_ sender: Any) {

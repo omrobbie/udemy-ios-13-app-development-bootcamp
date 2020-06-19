@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! SecondViewController
             destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
 

@@ -206,6 +206,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wMZ-LG-Y4P"/>
                     </view>
+                    <connections>
+                        <outlet property="lblAdvice" destination="9IV-CT-mxw" id="Vbw-eU-vYi"/>
+                        <outlet property="lblBMI" destination="VU9-2W-Sd5" id="TB6-fH-7LB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fn-rV-g4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

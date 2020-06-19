@@ -16,6 +16,8 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var btnTip20: UIButton!
     @IBOutlet weak var lblSplit: UILabel!
 
+    var tipValue = 0.0
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,10 +30,13 @@ class CalculatorViewController: UIViewController {
         let tip = sender.currentTitle!
 
         if tip == "10%" {
+            tipValue = 0.1
             btnTip10.isSelected = true
         } else if tip == "20%" {
+            tipValue = 0.2
             btnTip20.isSelected = true
         } else {
+            tipValue = 0.0
             btnTip0.isSelected = true
         }
     }
@@ -40,6 +45,7 @@ class CalculatorViewController: UIViewController {
     }
 
     @IBAction func btnCalculateTapped(_ sender: Any) {
+        print(tipValue)
         performSegue(withIdentifier: "goToResult", sender: self)
     }
 }

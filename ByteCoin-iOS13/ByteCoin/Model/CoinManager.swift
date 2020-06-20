@@ -8,7 +8,15 @@
 
 import Foundation
 
+protocol CoinManagerDelegate  {
+
+    func didUpdateCoin(coin: CoinModel)
+    func didFailWithError(error: Error)
+}
+
 struct CoinManager {
+
+    var delegate: CoinManagerDelegate?
     
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC"
     let apiKey = "24AB72B9-6AAF-4D28-A9A8-4533FE3FA80B"
@@ -26,15 +34,17 @@ struct CoinManager {
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let error = error {
                 print(error.localizedDescription)
+                self.delegate?.didFailWithError(error: error)
                 return
             }
 
             if let data = data {
                 do {
-                    let json = try JSONDecoder().decode(CoinModel.self, from: data)
-                    print(json)
+                    let coinModel = try JSONDecoder().decode(CoinModel.self, from: data)
+                    self.delegate?.didUpdateCoin(coin: coinModel)
                 } catch {
                     print(error.localizedDescription)
+                    self.delegate?.didFailWithError(error: error)
                     return
                 }
             }

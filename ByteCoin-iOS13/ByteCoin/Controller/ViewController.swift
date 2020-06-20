@@ -14,15 +14,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblCurrency: UILabel!
     @IBOutlet weak var pckCurrency: UIPickerView!
 
-    let coinManager = CoinManager()
+    var coinManager = CoinManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         pckCurrency.delegate = self
         pckCurrency.dataSource = self
+        coinManager.delegate = self
     }
 }
 
+// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -40,5 +42,17 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let currency = coinManager.currencyArray[row]
         coinManager.getCoinPrice(for: currency)
+    }
+}
+
+// MARK: - CoinManagerDelegate
+extension ViewController: CoinManagerDelegate {
+
+    func didUpdateCoin(coin: CoinModel) {
+        print(coin)
+    }
+
+    func didFailWithError(error: Error) {
+        print(error.localizedDescription)
     }
 }

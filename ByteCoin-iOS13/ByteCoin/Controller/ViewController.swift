@@ -49,7 +49,10 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 extension ViewController: CoinManagerDelegate {
 
     func didUpdateCoin(coin: CoinModel) {
-        print(coin)
+        DispatchQueue.main.async {
+            self.lblBitcoin.text = String(format: "%.2f", coin.rate)
+            self.lblCurrency.text = coin.asset_id_quote
+        }
     }
 
     func didFailWithError(error: Error) {

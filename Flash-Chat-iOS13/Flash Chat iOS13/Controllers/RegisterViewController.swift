@@ -15,5 +15,4 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerPressed(_ sender: UIButton) {
     }
-    
 }

@@ -61,4 +61,8 @@ extension WeatherViewController: WeatherManagerDelegate {
         print(weather.temperatureString)
         print(weather.conditionName)
     }
+
+    func didFailWithError(_ error: Error) {
+        print(error.localizedDescription)
+    }
 }

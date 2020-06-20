@@ -23,8 +23,10 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         searchTextField.delegate = self
         weatherManager.delegate = self
+        locationManager.delegate = self
 
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
     }
 
     @IBAction func btnSearchTapped(_ sender: Any) {
@@ -71,6 +73,20 @@ extension WeatherViewController: WeatherManagerDelegate {
     }
 
     func didFailWithError(_ error: Error) {
+        print(error.localizedDescription)
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+extension WeatherViewController: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            print(location.coordinate)
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
 }

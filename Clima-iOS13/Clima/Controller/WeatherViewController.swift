@@ -28,6 +28,7 @@ class WeatherViewController: UIViewController {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension WeatherViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -54,6 +55,7 @@ extension WeatherViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: - WeatherManagerDelegate
 extension WeatherViewController: WeatherManagerDelegate {
 
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {

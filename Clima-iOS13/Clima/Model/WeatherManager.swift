@@ -10,7 +10,7 @@ import Foundation
 
 protocol WeatherManagerDelegate {
 
-    func didUpdateWeather(weather: WeatherModel)
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
 }
 
 struct WeatherManager {
@@ -21,10 +21,10 @@ struct WeatherManager {
 
     func fetchWeather(cityName: String) {
         let urlString = "\(weatherUrl)&q=\(cityName)"
-        performRequest(urlString: urlString)
+        performRequest(with: urlString)
     }
 
-    func performRequest(urlString: String) {
+    func performRequest(with urlString: String) {
         if let url =  URL(string: urlString) {
             URLSession.shared.dataTask(with: url) { (data, _, error) in
                 if let error = error {
@@ -33,15 +33,15 @@ struct WeatherManager {
                 }
 
                 if let data = data {
-                    if let weather = self.parseJSON(weatherData: data) {
-                        self.delegate?.didUpdateWeather(weather: weather)
+                    if let weather = self.parseJSON(data) {
+                        self.delegate?.didUpdateWeather(self, weather: weather)
                     }
                 }
             }.resume()
         }
     }
 
-    func parseJSON(weatherData: Data) -> WeatherModel? {
+    func parseJSON(_ weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
 
         do {

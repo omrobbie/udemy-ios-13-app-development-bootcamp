@@ -56,7 +56,7 @@ extension WeatherViewController: UITextFieldDelegate {
 
 extension WeatherViewController: WeatherManagerDelegate {
 
-    func didUpdateWeather(weather: WeatherModel) {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         print(weather.cityName)
         print(weather.temperatureString)
         print(weather.conditionName)

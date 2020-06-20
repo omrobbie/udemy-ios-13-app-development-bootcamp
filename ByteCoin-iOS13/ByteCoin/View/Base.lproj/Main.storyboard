@@ -95,6 +95,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CjI-yV-vnC"/>
                     </view>
+                    <connections>
+                        <outlet property="lblBitcoin" destination="N2a-Ax-iRV" id="cMR-O8-GLF"/>
+                        <outlet property="lblCurrency" destination="MAn-y0-nXv" id="oBs-Ip-AYi"/>
+                        <outlet property="pckCurrency" destination="ct2-jk-pgH" id="KOG-gj-8dM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

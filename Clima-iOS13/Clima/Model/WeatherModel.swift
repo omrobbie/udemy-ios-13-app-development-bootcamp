@@ -34,4 +34,8 @@ struct WeatherModel {
             return "cloud"
         }
     }
+
+    var temperatureString: String {
+        return String(format: "%.1f", temperature)
+    }
 }

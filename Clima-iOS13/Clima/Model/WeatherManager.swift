@@ -43,6 +43,7 @@ struct WeatherManager {
 
             let weather = WeatherModel(conditionId: weatherId, cityName: name, temperature: temp)
             print(weather.conditionName)
+            print(weather.temperatureString)
         } catch {
             print(error.localizedDescription)
         }

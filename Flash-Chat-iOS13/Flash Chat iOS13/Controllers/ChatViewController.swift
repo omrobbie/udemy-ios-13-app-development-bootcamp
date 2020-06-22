@@ -16,7 +16,8 @@ class ChatViewController: UIViewController {
 
     var messages: [Message] = [
         Message(sender: "putu.roby@yahoo.com", body: "Hi!"),
-        Message(sender: "putu.roby@yahoo.com", body: "Di sini omrobbie.")
+        Message(sender: "putu.roby@yahoo.com", body: "Di sini omrobbie."),
+        Message(sender: "putu.roby@yahoo.com", body: "Ini pesan yang sangat panjang untuk mencoba fleksibilitas tinggi dari teks chat.")
     ]
 
     override func viewDidLoad() {

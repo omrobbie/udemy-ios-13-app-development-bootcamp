@@ -119,8 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				0B62817C235DEE8100E35CAF /* Main.storyboard */,
-				FC452AEF24A091E800D436DB /* MessageCell.swift */,
 				FC452AF024A091E800D436DB /* MessageCell.xib */,
+				FC452AEF24A091E800D436DB /* MessageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

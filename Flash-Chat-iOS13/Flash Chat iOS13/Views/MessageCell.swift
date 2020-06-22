@@ -14,6 +14,11 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var imgIcon: UIImageView!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        viewMessage.layer.cornerRadius = viewMessage.frame.size.height / 5
+    }
+
     func parseData(item: Message) {
         lblMessage.text = item.body
     }

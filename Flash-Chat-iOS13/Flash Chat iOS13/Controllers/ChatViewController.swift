@@ -36,14 +36,13 @@ class ChatViewController: UIViewController {
     }
 
     func loadMessages() {
-        messages = []
-
-        db.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
+        db.collection(Constants.FStore.collectionName).addSnapshotListener { (querySnapshot, error) in
             if let error = error {
                 print(error.localizedDescription)
                 return
             }
 
+            self.messages = []
             if let snapshotDocuments = querySnapshot?.documents {
                 for doc in snapshotDocuments {
                     let data = doc.data()

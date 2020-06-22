@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="KGk-i7-Jjw" customClass="MessageCell" customModule="Flash_Chat_iOS13" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Z3-RV-Yf5">
+                        <rect key="frame" x="10" y="10" width="300" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYQ-a2-1D5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns6-ZG-3Z7">
+                                        <rect key="frame" x="10" y="10" width="220" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandPurple"/>
+                                <constraints>
+                                    <constraint firstItem="Ns6-ZG-3Z7" firstAttribute="top" secondItem="DYQ-a2-1D5" secondAttribute="top" constant="10" id="8JJ-LZ-aN2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ns6-ZG-3Z7" secondAttribute="bottom" constant="10" id="ADO-Kw-Q21"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ns6-ZG-3Z7" secondAttribute="trailing" constant="10" id="Wt1-Fj-Uzs"/>
+                                    <constraint firstItem="Ns6-ZG-3Z7" firstAttribute="leading" secondItem="DYQ-a2-1D5" secondAttribute="leading" constant="10" id="eU8-0h-23I"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="LCS-4s-GGZ">
+                                <rect key="frame" x="260" y="0.0" width="40" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Aok-Dn-5ku"/>
+                                    <constraint firstAttribute="width" constant="40" id="Evh-Oe-qXc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8Z3-RV-Yf5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Dqa-m1-58s"/>
+                    <constraint firstAttribute="bottom" secondItem="8Z3-RV-Yf5" secondAttribute="bottom" constant="10" id="NyV-LP-bpH"/>
+                    <constraint firstItem="8Z3-RV-Yf5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="SMQ-Hd-zyR"/>
+                    <constraint firstAttribute="trailing" secondItem="8Z3-RV-Yf5" secondAttribute="trailing" constant="10" id="u6S-bt-e8J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgIcon" destination="LCS-4s-GGZ" id="NKk-BH-DBS"/>
+                <outlet property="lblMessage" destination="Ns6-ZG-3Z7" id="Ymy-5F-QHM"/>
+                <outlet property="viewMessage" destination="DYQ-a2-1D5" id="OGY-UZ-eno"/>
+            </connections>
+            <point key="canvasLocation" x="-30.434782608695656" y="108.14732142857143"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MeAvatar" width="36" height="36"/>
+        <namedColor name="BrandPurple">
+            <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -26,6 +26,8 @@ class ChatViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+
+        tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
@@ -49,8 +51,9 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reusableCellIdentifier) else {return UITableViewCell()}
-        cell.textLabel?.text = messages[indexPath.row].body
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier) as! MessageCell
+        let item = messages[indexPath.row]
+        cell.parseData(item: item)
         return cell
     }
 }

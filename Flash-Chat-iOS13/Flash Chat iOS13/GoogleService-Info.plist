@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>158417939134-uo0sjr7k7sv6qfcf9ibg7kldh22dhbbs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.158417939134-uo0sjr7k7sv6qfcf9ibg7kldh22dhbbs</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>158417939134-mf7slv1lr2riulbv70lq8enjli6npm4g.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCRs5XlHfucEoJa2B2ewGpF3KqvWC5ttc8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>158417939134</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>co.appbrewery.Flash-Chat-iOS13</string>
+	<key>PROJECT_ID</key>
+	<string>friendlychat-40046</string>
+	<key>STORAGE_BUCKET</key>
+	<string>friendlychat-40046.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:158417939134:ios:8cbc4ae81214e9a0110cef</string>
+	<key>DATABASE_URL</key>
+	<string>https://friendlychat-40046.firebaseio.com</string>
+</dict>
+</plist>

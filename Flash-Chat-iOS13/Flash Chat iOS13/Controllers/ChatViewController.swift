@@ -31,6 +31,34 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
 
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+
+        loadMessages()
+    }
+
+    func loadMessages() {
+        messages = []
+
+        db.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+
+            if let snapshotDocuments = querySnapshot?.documents {
+                for doc in snapshotDocuments {
+                    let data = doc.data()
+                    if let sender = data[Constants.FStore.senderField] as? String,
+                        let body = data[Constants.FStore.bodyField] as? String {
+                        let newMessage = Message(sender: sender, body: body)
+                        self.messages.append(newMessage)
+
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {

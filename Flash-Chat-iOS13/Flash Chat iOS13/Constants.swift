@@ -21,4 +21,12 @@ struct Constants {
         static let bodyField = "body"
         static let dateField = "date"
     }
+
+    struct BrandColors {
+
+        static let blue = "BrandBlue"
+        static let blueLight = "BrandLightBlue"
+        static let purple = "BrandPurple"
+        static let purpleLight = "BrandLightPurple"
+    }
 }

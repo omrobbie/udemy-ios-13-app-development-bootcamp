@@ -58,3 +58,9 @@ Learn about Core Location, Protocol, Extension, and creating Dark Mode theme.<br
 ### 12. Byte Coin
 Learn about Core Location, Protocol, Extension, and creating Dark Mode theme.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/ByteCoin-iOS13/screenshot/preview.png" width=256 />
+
+### 13. Flash Chat
+Learn about Firebase Auth, Firebase Firestore, get instance data with listener.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Flash-Chat-iOS13/screenshot/preview1.png" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Flash-Chat-iOS13/screenshot/preview2.png" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Flash-Chat-iOS13/screenshot/preview3.png" width=256 />

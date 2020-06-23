@@ -76,7 +76,11 @@ class ChatViewController: UIViewController {
                     return
                 }
 
-                print("Successfully saved data.")
+                print("Successfully saved data.w")
+
+                DispatchQueue.main.async {
+                    self.messageTextfield.text = ""
+                }
             }
         }
     }

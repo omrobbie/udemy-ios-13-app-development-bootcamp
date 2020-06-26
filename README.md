@@ -36,43 +36,48 @@ Learn about struct as data model, create properties and methods.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Quizzler-iOS13/screenshot/preview1.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Quizzler-iOS13/screenshot/preview2.png" width=256 />
 
-### 8. Destini
+### 9. Destini
 Learn about struct as data model, create properties and methods.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Destini-iOS13/screenshot/preview.png" width=256 />
 
-### 9. BMI Calculator
+### 10. BMI Calculator
 Learn about Segue and Prepare, move between screen with data.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/BMI-Calculator-iOS13/screenshot/preview1.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/BMI-Calculator-iOS13/screenshot/preview2.png" width=256 />
 
-### 10. Tipsy
+### 11. Tipsy
 Learn about Segue and Prepare, move between screen with data.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Tipsy-iOS13/screenshot/preview1.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Tipsy-iOS13/screenshot/preview2.png" width=256 />
 
-### 11. Clima
+### 12. Clima
 Learn about Core Location, Protocol, Extension, and creating Dark Mode theme.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Clima-iOS13/screenshot/preview1.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Clima-iOS13/screenshot/preview2.png" width=256 />
 
-### 12. Byte Coin
+### 13. Byte Coin
 Learn about Core Location, Protocol, Extension, and creating Dark Mode theme.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/ByteCoin-iOS13/screenshot/preview.png" width=256 />
 
-### 13. Flash Chat
+### 14. Flash Chat
 Learn about Firebase Auth, Firebase Firestore, get instance data with listener.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Flash-Chat-iOS13/screenshot/preview1.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Flash-Chat-iOS13/screenshot/preview2.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Flash-Chat-iOS13/screenshot/preview3.png" width=256 />
 
-### 14. I Am Rich (SwiftUI)
+### 15. I Am Rich (SwiftUI)
 Learn about SwiftUI. How to change text, font size, weight, and color. How to add Image and resize it. How to group all of that in stacks.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/I%20Am%20Rich%20SwiftUI/screenshot/preview.png" width=256 />&nbsp;
 
-### 15. My Card (SwiftUI)
+### 16. My Card (SwiftUI)
 Learn about refactoring view using extract subview. Learn how to use default padding, overlay as image stroke.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/MyCard/screenshot/preview.png" width=256 />&nbsp;
 
-### 16. Dicee (SwiftUI)
+### 17. Dicee (SwiftUI)
 Learn about @State management.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Dicee-SwiftUI/screenshot/preview.png" width=256 />&nbsp;
+
+### 18. H4X0R News (SwiftUI)
+Learn about ObservableObject with @Published and @ObservedObject.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/H4X0R-News/screenshot/preview1.png" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/H4X0R-News/screenshot/preview2.png" width=256 />&nbsp;

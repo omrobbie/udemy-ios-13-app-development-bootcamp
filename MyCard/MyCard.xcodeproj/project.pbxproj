@@ -24,6 +24,7 @@
 		FCFEC0F824A5D49D00A19B54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FCFEC0FB24A5D49D00A19B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCFEC0FD24A5D49D00A19B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCFEC10424A5D5F200A19B54 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 				FCFEC0EF24A5D49C00A19B54 /* AppDelegate.swift */,
 				FCFEC0F124A5D49C00A19B54 /* SceneDelegate.swift */,
 				FCFEC0F324A5D49C00A19B54 /* ContentView.swift */,
+				FCFEC10324A5D5CA00A19B54 /* Fonts */,
 				FCFEC0F524A5D49D00A19B54 /* Assets.xcassets */,
 				FCFEC0FA24A5D49D00A19B54 /* LaunchScreen.storyboard */,
 				FCFEC0FD24A5D49D00A19B54 /* Info.plist */,
@@ -73,6 +75,14 @@
 				FCFEC0F824A5D49D00A19B54 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FCFEC10324A5D5CA00A19B54 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FCFEC10424A5D5F200A19B54 /* Pacifico-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

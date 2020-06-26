@@ -14,6 +14,11 @@ struct ContentView: View {
             Color(red: 0.09, green: 0.63, blue: 0.52)
                 .edgesIgnoringSafeArea(.all)
             VStack {
+                Image("omrobbie")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150, height: 150)
+                    .clipShape(Circle())
                 Text("omrobbie")
                     .font(Font.custom("Pacifico-Regular", size: 40))
                     .bold()

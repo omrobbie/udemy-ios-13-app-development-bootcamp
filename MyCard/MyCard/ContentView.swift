@@ -28,15 +28,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .font(.system(size: 15))
                 Divider()
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.white)
-                    .frame(height: 50)
-                    .overlay(HStack {
-                        Image(systemName: "phone.fill")
-                            .foregroundColor(.green)
-                        Text("+62 812 5262 350")
-                    })
-                    .padding(.all)
+                InfoView(imageName: "phone.fill", text: "+62 812 5262 350")
             }
         }
     }

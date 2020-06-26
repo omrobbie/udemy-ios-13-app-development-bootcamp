@@ -13,6 +13,7 @@
 		FCFEC0F624A5D49D00A19B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0F524A5D49D00A19B54 /* Assets.xcassets */; };
 		FCFEC0F924A5D49D00A19B54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0F824A5D49D00A19B54 /* Preview Assets.xcassets */; };
 		FCFEC0FC24A5D49D00A19B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0FA24A5D49D00A19B54 /* LaunchScreen.storyboard */; };
+		FCFEC10724A5DDDF00A19B54 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC10624A5DDDF00A19B54 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		FCFEC0FB24A5D49D00A19B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCFEC0FD24A5D49D00A19B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFEC10424A5D5F200A19B54 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		FCFEC10624A5DDDF00A19B54 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				FCFEC0EF24A5D49C00A19B54 /* AppDelegate.swift */,
 				FCFEC0F124A5D49C00A19B54 /* SceneDelegate.swift */,
 				FCFEC0F324A5D49C00A19B54 /* ContentView.swift */,
+				FCFEC10624A5DDDF00A19B54 /* InfoView.swift */,
 				FCFEC10324A5D5CA00A19B54 /* Fonts */,
 				FCFEC0F524A5D49D00A19B54 /* Assets.xcassets */,
 				FCFEC0FA24A5D49D00A19B54 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFEC10724A5DDDF00A19B54 /* InfoView.swift in Sources */,
 				FCFEC0F024A5D49C00A19B54 /* AppDelegate.swift in Sources */,
 				FCFEC0F224A5D49C00A19B54 /* SceneDelegate.swift in Sources */,
 				FCFEC0F424A5D49C00A19B54 /* ContentView.swift in Sources */,

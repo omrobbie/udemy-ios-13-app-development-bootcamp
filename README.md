@@ -68,3 +68,7 @@ Learn about Firebase Auth, Firebase Firestore, get instance data with listener.<
 ### 14. I Am Rich SwiftUI
 Learn about SwiftUI. How to change text, font size, weight, and color. How to add Image and resize it. How to group all of that in stacks.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/I%20Am%20Rich%20SwiftUI/screenshot/preview.png" width=256 />&nbsp;
+
+### 15. My Card
+Learn about refactoring view using extract subview. Learn how to use default padding, overlay as image stroke.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/MyCard/screenshot/preview.png" width=256 />&nbsp;

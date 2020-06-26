@@ -30,12 +30,13 @@ struct ContentView: View {
                 Divider()
                 RoundedRectangle(cornerRadius: 20)
                     .fill(Color.white)
-                    .frame(width: 200, height: 50)
+                    .frame(height: 50)
                     .overlay(HStack {
                         Image(systemName: "phone.fill")
                             .foregroundColor(.green)
                         Text("+62 812 5262 350")
                     })
+                    .padding(.all)
             }
         }
     }

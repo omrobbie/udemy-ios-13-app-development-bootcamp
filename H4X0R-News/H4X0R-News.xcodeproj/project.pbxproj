@@ -13,6 +13,7 @@
 		FCFEC13B24A5EFF500A19B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC13A24A5EFF500A19B54 /* Assets.xcassets */; };
 		FCFEC13E24A5EFF500A19B54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC13D24A5EFF500A19B54 /* Preview Assets.xcassets */; };
 		FCFEC14124A5EFF500A19B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC13F24A5EFF500A19B54 /* LaunchScreen.storyboard */; };
+		FCFEC14924A5F23600A19B54 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC14824A5F23600A19B54 /* PostModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FCFEC13D24A5EFF500A19B54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FCFEC14024A5EFF500A19B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCFEC14224A5EFF500A19B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCFEC14824A5F23600A19B54 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FCFEC13424A5EFF300A19B54 /* AppDelegate.swift */,
 				FCFEC13624A5EFF300A19B54 /* SceneDelegate.swift */,
 				FCFEC13824A5EFF300A19B54 /* ContentView.swift */,
+				FCFEC14824A5F23600A19B54 /* PostModel.swift */,
 				FCFEC13A24A5EFF500A19B54 /* Assets.xcassets */,
 				FCFEC13F24A5EFF500A19B54 /* LaunchScreen.storyboard */,
 				FCFEC14224A5EFF500A19B54 /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCFEC13524A5EFF300A19B54 /* AppDelegate.swift in Sources */,
+				FCFEC14924A5F23600A19B54 /* PostModel.swift in Sources */,
 				FCFEC13724A5EFF300A19B54 /* SceneDelegate.swift in Sources */,
 				FCFEC13924A5EFF300A19B54 /* ContentView.swift in Sources */,
 			);

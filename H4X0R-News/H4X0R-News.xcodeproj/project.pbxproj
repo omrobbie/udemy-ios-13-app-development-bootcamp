@@ -34,6 +34,7 @@
 		FCFEC15024A6210F00A19B54 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FCFEC15224A6267900A19B54 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		FCFEC15524A627E900A19B54 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		FCFEC15724A62BFA00A19B54 /* H4X0R-News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4X0R-News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 		FCFEC13324A5EFF300A19B54 /* H4X0R-News */ = {
 			isa = PBXGroup;
 			children = (
+				FCFEC15724A62BFA00A19B54 /* H4X0R-News.entitlements */,
 				FCFEC13424A5EFF300A19B54 /* AppDelegate.swift */,
 				FCFEC13624A5EFF300A19B54 /* SceneDelegate.swift */,
 				FCFEC14A24A61A5500A19B54 /* Models */,
@@ -328,8 +330,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R-News/H4X0R-News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R-News/Preview Content\"";
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "H4X0R-News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,6 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omrobbie.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,8 +352,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R-News/H4X0R-News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R-News/Preview Content\"";
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "H4X0R-News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,6 +364,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omrobbie.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

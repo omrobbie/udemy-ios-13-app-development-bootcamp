@@ -15,6 +15,7 @@
 		FCFEC14124A5EFF500A19B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC13F24A5EFF500A19B54 /* LaunchScreen.storyboard */; };
 		FCFEC14C24A61A7200A19B54 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC14B24A61A7200A19B54 /* NetworkManager.swift */; };
 		FCFEC14E24A61C2100A19B54 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC14D24A61C2100A19B54 /* PostData.swift */; };
+		FCFEC15124A6210F00A19B54 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC15024A6210F00A19B54 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FCFEC14224A5EFF500A19B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFEC14B24A61A7200A19B54 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FCFEC14D24A61C2100A19B54 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		FCFEC15024A6210F00A19B54 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,8 @@
 			children = (
 				FCFEC13424A5EFF300A19B54 /* AppDelegate.swift */,
 				FCFEC13624A5EFF300A19B54 /* SceneDelegate.swift */,
-				FCFEC13824A5EFF300A19B54 /* ContentView.swift */,
 				FCFEC14A24A61A5500A19B54 /* Models */,
+				FCFEC14F24A620F100A19B54 /* Views */,
 				FCFEC13A24A5EFF500A19B54 /* Assets.xcassets */,
 				FCFEC13F24A5EFF500A19B54 /* LaunchScreen.storyboard */,
 				FCFEC14224A5EFF500A19B54 /* Info.plist */,
@@ -87,6 +89,15 @@
 				FCFEC14D24A61C2100A19B54 /* PostData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FCFEC14F24A620F100A19B54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCFEC13824A5EFF300A19B54 /* ContentView.swift */,
+				FCFEC15024A6210F00A19B54 /* DetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCFEC13524A5EFF300A19B54 /* AppDelegate.swift in Sources */,
+				FCFEC15124A6210F00A19B54 /* DetailView.swift in Sources */,
 				FCFEC14E24A61C2100A19B54 /* PostData.swift in Sources */,
 				FCFEC14C24A61A7200A19B54 /* NetworkManager.swift in Sources */,
 				FCFEC13724A5EFF300A19B54 /* SceneDelegate.swift in Sources */,

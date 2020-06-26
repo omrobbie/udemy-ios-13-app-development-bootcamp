@@ -19,6 +19,7 @@ struct ContentView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 150, height: 150)
                     .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.white, lineWidth: 5))
                 Text("omrobbie")
                     .font(Font.custom("Pacifico-Regular", size: 40))
                     .bold()

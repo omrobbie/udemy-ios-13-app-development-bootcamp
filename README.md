@@ -64,3 +64,7 @@ Learn about Firebase Auth, Firebase Firestore, get instance data with listener.<
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Flash-Chat-iOS13/screenshot/preview1.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Flash-Chat-iOS13/screenshot/preview2.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Flash-Chat-iOS13/screenshot/preview3.png" width=256 />
+
+### 14. I Am Rich SwiftUI
+Learn about SwiftUI. How to change text, font size, weight, and color. How to add Image and resize it. How to group all of that in stacks.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/I%20Am%20Rich%20SwiftUI/screenshot/preview.png" width=256 />&nbsp;

@@ -11,8 +11,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List(posts) { post in
-                Text(post.title)
+            List(0..<3) { item in
+                Text("Item \(item)")
             }
             .navigationBarTitle("H4X0R News")
         }

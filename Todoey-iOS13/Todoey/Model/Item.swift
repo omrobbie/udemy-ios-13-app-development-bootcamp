@@ -8,8 +8,9 @@
 
 import Foundation
 
-class Item: Encodable, Decodable {
-
-    var title: String = ""
-    var done: Bool = false
-}
+// - Replace with CoreData
+//class Item: Encodable, Decodable {
+//
+//    var title: String = ""
+//    var done: Bool = false
+//}

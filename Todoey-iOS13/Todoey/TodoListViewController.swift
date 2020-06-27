@@ -23,6 +23,7 @@ class TodoListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         cell.textLabel?.text = itemArray[indexPath.row]
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 

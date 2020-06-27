@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TodoListViewController: UITableViewController {
 
@@ -15,7 +16,10 @@ class TodoListViewController: UITableViewController {
 //- With UserDefaults
 //    let userDefaults = UserDefaults.standard
 
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent("Items.plist")
+//- With FileManager
+//    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent("Items.plist")
+
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +39,7 @@ class TodoListViewController: UITableViewController {
 //            self.itemArray = itemArray
 //        }
 
-        print(dataFilePath)
+//        print(dataFilePath)
         loadItems()
     }
 
@@ -64,8 +68,9 @@ class TodoListViewController: UITableViewController {
         let alertVC = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
         let actionAdd = UIAlertAction(title: "Add Item", style: .default) { (action) in
             if let text = textField.text {
-                let newItem = Item()
+                let newItem = Item(context: self.context)
                 newItem.title = text
+                newItem.done = false
 
                 self.itemArray.append(newItem)
                 self.saveItems()
@@ -88,27 +93,36 @@ class TodoListViewController: UITableViewController {
 
     // MARK: - Model manipulation methods
     func saveItems() {
-        let encoder = PropertyListEncoder()
-
         do {
-            let data = try encoder.encode(self.itemArray)
-            try data.write(to: self.dataFilePath)
+            try context.save()
         } catch {
             print(error.localizedDescription)
             return
         }
+
+//- With FileManager
+//        let encoder = PropertyListEncoder()
+//
+//        do {
+//            let data = try encoder.encode(self.itemArray)
+//            try data.write(to: self.dataFilePath)
+//        } catch {
+//            print(error.localizedDescription)
+//            return
+//        }
     }
 
     func loadItems() {
-        if let data = try? Data(contentsOf: dataFilePath) {
-            let decoder = PropertyListDecoder()
-
-            do {
-                itemArray = try decoder.decode([Item].self, from: data)
-            } catch {
-                print(error.localizedDescription)
-                return
-            }
-        }
+//- With FileManager
+//        if let data = try? Data(contentsOf: dataFilePath) {
+//            let decoder = PropertyListDecoder()
+//
+//            do {
+//                itemArray = try decoder.decode([Item].self, from: data)
+//            } catch {
+//                print(error.localizedDescription)
+//                return
+//            }
+//        }
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-// - Replace with CoreData
+//- With FileManager
 //class Item: Encodable, Decodable {
 //
 //    var title: String = ""

@@ -82,6 +82,16 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
         loadItems(with: request)
     }
 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadItems()
+
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
+
     @IBAction func btnAddTapped(_ sender: Any) {
         var textField = UITextField()
 

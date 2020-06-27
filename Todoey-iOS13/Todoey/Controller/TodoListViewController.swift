@@ -55,6 +55,7 @@ class TodoListViewController: UITableViewController {
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
         tableView.deselectRow(at: indexPath, animated: true)
         tableView.reloadData()
+        saveItems()
     }
 
     @IBAction func btnAddTapped(_ sender: Any) {
@@ -67,16 +68,7 @@ class TodoListViewController: UITableViewController {
                 newItem.title = text
 
                 self.itemArray.append(newItem)
-
-                let encoder = PropertyListEncoder()
-
-                do {
-                    let data = try encoder.encode(self.itemArray)
-                    try data.write(to: self.dataFilePath)
-                } catch {
-                    print(error.localizedDescription)
-                    return
-                }
+                self.saveItems()
 
 //- With UserDefaults
 //                self.userDefaults.set(self.itemArray, forKey: "TodoListArray")
@@ -92,5 +84,18 @@ class TodoListViewController: UITableViewController {
 
         alertVC.addAction(actionAdd)
         present(alertVC, animated: true)
+    }
+
+    // MARK: - Model manipulation methods
+    func saveItems() {
+        let encoder = PropertyListEncoder()
+
+        do {
+            let data = try encoder.encode(self.itemArray)
+            try data.write(to: self.dataFilePath)
+        } catch {
+            print(error.localizedDescription)
+            return
+        }
     }
 }

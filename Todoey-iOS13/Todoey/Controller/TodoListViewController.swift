@@ -15,10 +15,10 @@ class TodoListViewController: UITableViewController {
 //- With UserDefaults
 //    let userDefaults = UserDefaults.standard
 
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent("Items.plist")
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent("Items.plist")
 
         print(dataFilePath)
 
@@ -67,6 +67,16 @@ class TodoListViewController: UITableViewController {
                 newItem.title = text
 
                 self.itemArray.append(newItem)
+
+                let encoder = PropertyListEncoder()
+
+                do {
+                    let data = try encoder.encode(self.itemArray)
+                    try data.write(to: self.dataFilePath)
+                } catch {
+                    print(error.localizedDescription)
+                    return
+                }
 
 //- With UserDefaults
 //                self.userDefaults.set(self.itemArray, forKey: "TodoListArray")

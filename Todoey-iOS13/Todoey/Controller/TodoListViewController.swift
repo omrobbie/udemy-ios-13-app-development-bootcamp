@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TodoListViewController: UITableViewController {
+class TodoListViewController: UITableViewController, UISearchBarDelegate {
 
     var itemArray = [Item]()
 
@@ -69,6 +69,24 @@ class TodoListViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
             saveItems()
         }
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+
+        request.predicate = predicate
+        request.sortDescriptors = [sortDescriptor]
+
+        do {
+            itemArray = try context.fetch(request)
+        } catch {
+            print(error.localizedDescription)
+            return
+        }
+
+        tableView.reloadData()
     }
 
     @IBAction func btnAddTapped(_ sender: Any) {

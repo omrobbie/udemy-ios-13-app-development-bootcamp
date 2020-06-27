@@ -79,14 +79,7 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
         request.predicate = predicate
         request.sortDescriptors = [sortDescriptor]
 
-        do {
-            itemArray = try context.fetch(request)
-        } catch {
-            print(error.localizedDescription)
-            return
-        }
-
-        tableView.reloadData()
+        loadItems(with: request)
     }
 
     @IBAction func btnAddTapped(_ sender: Any) {
@@ -139,8 +132,8 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
 //        }
     }
 
-    func loadItems() {
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
+    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest()) {
+        let request: NSFetchRequest<Item> = request
 
         do {
             itemArray = try context.fetch(request)
@@ -148,6 +141,8 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
             print(error.localizedDescription)
             return
         }
+
+        tableView.reloadData()
 
 //- With FileManager
 //        if let data = try? Data(contentsOf: dataFilePath) {

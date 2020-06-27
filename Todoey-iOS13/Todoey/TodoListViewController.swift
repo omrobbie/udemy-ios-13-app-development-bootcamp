@@ -28,6 +28,8 @@ class TodoListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        tableView.deselectRow(at: indexPath, animated: true)
         print(itemArray[indexPath.row])
     }
 }

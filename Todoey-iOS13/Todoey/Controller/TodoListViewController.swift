@@ -62,6 +62,15 @@ class TodoListViewController: UITableViewController {
         saveItems()
     }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            context.delete(itemArray[indexPath.row])
+            itemArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            saveItems()
+        }
+    }
+
     @IBAction func btnAddTapped(_ sender: Any) {
         var textField = UITextField()
 

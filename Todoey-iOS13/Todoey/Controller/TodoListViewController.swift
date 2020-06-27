@@ -113,6 +113,15 @@ class TodoListViewController: UITableViewController {
     }
 
     func loadItems() {
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+
+        do {
+            itemArray = try context.fetch(request)
+        } catch {
+            print(error.localizedDescription)
+            return
+        }
+
 //- With FileManager
 //        if let data = try? Data(contentsOf: dataFilePath) {
 //            let decoder = PropertyListDecoder()

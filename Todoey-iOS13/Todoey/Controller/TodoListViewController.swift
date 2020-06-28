@@ -68,10 +68,25 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//- With CoreData
 //        itemArray[indexPath.row].done = !itemArray[indexPath.row].done
 //        tableView.deselectRow(at: indexPath, animated: true)
 //        tableView.reloadData()
 //        saveItems()
+
+//- With Realm
+        if let item = itemArray?[indexPath.row] {
+            do {
+                try realm.write {
+                    item.done = !item.done
+                }
+            } catch {
+                print(error.localizedDescription)
+                return
+            }
+
+            tableView.reloadData()
+        }
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

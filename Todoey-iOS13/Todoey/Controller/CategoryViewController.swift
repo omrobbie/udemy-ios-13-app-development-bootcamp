@@ -7,20 +7,23 @@
 //
 
 import UIKit
+import CoreData
 
 class CategoryViewController: UITableViewController {
+
+    private var categories = [Category]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return categories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = "Item \(indexPath.row)"
+        cell.textLabel?.text = categories[indexPath.row].name
         return cell
     }
 

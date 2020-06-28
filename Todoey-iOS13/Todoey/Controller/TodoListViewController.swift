@@ -11,7 +11,13 @@ import CoreData
 
 class TodoListViewController: UITableViewController, UISearchBarDelegate {
 
-    var itemArray = [Item]()
+    var selectedCategory: Category? {
+        didSet {
+            loadItems()
+        }
+    }
+
+    private var itemArray = [Item]()
 
 //- With UserDefaults
 //    let userDefaults = UserDefaults.standard
@@ -19,7 +25,7 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
 //- With FileManager
 //    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent("Items.plist")
 
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()

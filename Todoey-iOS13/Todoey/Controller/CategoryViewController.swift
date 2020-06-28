@@ -19,6 +19,16 @@ class CategoryViewController: UITableViewController {
         loadData()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToItem" {
+            let vc = segue.destination as! TodoListViewController
+
+            if let indexPath = tableView.indexPathForSelectedRow {
+                vc.selectedCategory = categories[indexPath.row]
+            }
+        }
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }

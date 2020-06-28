@@ -97,6 +97,21 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
 //            tableView.deleteRows(at: [indexPath], with: .fade)
 //            saveItems()
 //        }
+
+//- With Realm
+        if editingStyle == .delete {
+            if let item = itemArray?[indexPath.row] {
+                do {
+                    try realm.write {
+                        realm.delete(item)
+                        tableView.deleteRows(at: [indexPath], with: .fade)
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                    return
+                }
+            }
+        }
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

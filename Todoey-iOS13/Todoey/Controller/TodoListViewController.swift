@@ -160,6 +160,7 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
                 let newItem = ItemRealm()
                 newItem.title = text
                 newItem.done = false
+                newItem.dateCreated = Date()
 
                 self.saveItems(item: newItem)
                 self.tableView.reloadData()

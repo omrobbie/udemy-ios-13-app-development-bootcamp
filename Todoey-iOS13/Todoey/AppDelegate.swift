@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // UserDefaults file location
         print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
+
+        // Realm file location
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+
+        let data = Data()
+        data.name = "omrobbie"
+        data.age = 22
+
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(data)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
 
         return true
     }

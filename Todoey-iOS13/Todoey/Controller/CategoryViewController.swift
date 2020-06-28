@@ -11,6 +11,7 @@ import CoreData
 
 class CategoryViewController: UITableViewController {
 
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     private var categories = [Category]()
 
     override func viewDidLoad() {
@@ -32,5 +33,22 @@ class CategoryViewController: UITableViewController {
     }
 
     @IBAction func btnAddTapped(_ sender: Any) {
+        var textField = UITextField()
+        let alertVC = UIAlertController(title: "Add new category", message: "", preferredStyle: .alert)
+        let actionAdd = UIAlertAction(title: "Add category", style: .default) { (action) in
+            let newCategory = Category(context: self.context)
+            newCategory.name = textField.text
+
+            self.categories.append(newCategory)
+            self.tableView.reloadData()
+        }
+
+        alertVC.addTextField { (newCategory) in
+            newCategory.placeholder = "Create new category..."
+            textField = newCategory
+        }
+
+        alertVC.addAction(actionAdd)
+        present(alertVC, animated: true)
     }
 }

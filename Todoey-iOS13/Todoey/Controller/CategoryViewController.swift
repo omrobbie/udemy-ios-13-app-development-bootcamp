@@ -16,6 +16,7 @@ class CategoryViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,6 +33,26 @@ class CategoryViewController: UITableViewController {
         performSegue(withIdentifier: "goToItem", sender: self)
     }
 
+    private func saveData() {
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+            return
+        }
+    }
+
+    private func loadData(request: NSFetchRequest<Category> = Category.fetchRequest()) {
+        let request: NSFetchRequest<Category> = request
+
+        do {
+            categories = try context.fetch(request)
+        } catch {
+            print(error.localizedDescription)
+            return
+        }
+    }
+
     @IBAction func btnAddTapped(_ sender: Any) {
         var textField = UITextField()
         let alertVC = UIAlertController(title: "Add new category", message: "", preferredStyle: .alert)
@@ -41,6 +62,7 @@ class CategoryViewController: UITableViewController {
 
             self.categories.append(newCategory)
             self.tableView.reloadData()
+            self.saveData()
         }
 
         alertVC.addTextField { (newCategory) in

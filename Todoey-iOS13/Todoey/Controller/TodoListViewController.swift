@@ -149,8 +149,6 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
     }
 
     func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest()) {
-        let request: NSFetchRequest<Item> = request
-
         do {
             itemArray = try context.fetch(request)
         } catch {

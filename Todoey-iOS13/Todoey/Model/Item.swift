@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 //- With FileManager
 //class Item: Encodable, Decodable {
@@ -14,3 +15,11 @@ import Foundation
 //    var title: String = ""
 //    var done: Bool = false
 //}
+
+class ItemRealm: Object {
+
+    @objc dynamic var title: String = ""
+    @objc dynamic var done: Bool = false
+
+    var parentCategory = LinkingObjects(fromType: CategoryRealm.self, property: "items")
+}

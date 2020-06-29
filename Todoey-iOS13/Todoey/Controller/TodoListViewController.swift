@@ -13,7 +13,9 @@ import ChameleonFramework
 
 class TodoListViewController: UITableViewController, UISearchBarDelegate {
 
-//- With UserDefaults
+    @IBOutlet weak var searchBar: UISearchBar!
+
+    //- With UserDefaults
 //    let userDefaults = UserDefaults.standard
 
 //- With FileManager
@@ -32,6 +34,8 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
 
     private var itemArray: Results<ItemRealm>?
     private let realm = try! Realm()
+
+    private var navBarColor: UIColor?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +57,20 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
 
 //        print(dataFilePath)
         loadItems()
+
+        title = selectedCategory?.name
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navBarColor = navigationController?.navigationBar.barTintColor
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: selectedCategory!.color)
+        searchBar.barTintColor = UIColor(hexString: selectedCategory!.color)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.barTintColor = navBarColor
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

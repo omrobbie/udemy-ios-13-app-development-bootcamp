@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import RealmSwift
+import ChameleonFramework
 
 class TodoListViewController: UITableViewController, UISearchBarDelegate {
 
@@ -63,6 +64,12 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
         if let item = itemArray?[indexPath.row] {
             cell.textLabel?.text = item.title
             cell.accessoryType = item.done ? .checkmark : .none
+
+            let percentage = CGFloat(indexPath.row) / CGFloat(itemArray!.count)
+            if let color = FlatSkyBlue().darken(byPercentage: percentage) {
+                cell.backgroundColor = color
+                cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
+            }
         }
         return cell
     }

@@ -66,7 +66,7 @@ class TodoListViewController: UITableViewController, UISearchBarDelegate {
             cell.accessoryType = item.done ? .checkmark : .none
 
             let percentage = CGFloat(indexPath.row) / CGFloat(itemArray!.count)
-            if let color = FlatSkyBlue().darken(byPercentage: percentage) {
+            if let color = UIColor(hexString: selectedCategory?.color ?? "")?.darken(byPercentage: percentage) {
                 cell.backgroundColor = color
                 cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
             }

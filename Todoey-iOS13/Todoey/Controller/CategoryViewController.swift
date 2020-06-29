@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import RealmSwift
+import SwipeCellKit
 
 class CategoryViewController: UITableViewController {
 
@@ -23,6 +24,7 @@ class CategoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        tableView.rowHeight = 120
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,7 +42,8 @@ class CategoryViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SwipeTableViewCell
+        cell.delegate = self
         cell.textLabel?.text = categories?[indexPath.row].name
         return cell
     }
@@ -108,5 +111,19 @@ class CategoryViewController: UITableViewController {
 
         alertVC.addAction(actionAdd)
         present(alertVC, animated: true)
+    }
+}
+
+extension CategoryViewController: SwipeTableViewCellDelegate {
+
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else {return nil}
+
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            print("Item deleted!")
+        }
+
+        deleteAction.image = UIImage(named: "delete-icon")
+        return [deleteAction]
     }
 }

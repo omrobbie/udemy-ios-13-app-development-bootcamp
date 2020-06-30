@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import StoreKit
 
 class QuoteTableViewController: UITableViewController {
+
+    private let productID = "com.omrobbie.InspoQuotes.PremiumQuotes"
     
     var quotesToShow = [
         "Our greatest glory is not in never falling, but in rising every time we fall. — Confucius",
@@ -30,6 +33,7 @@ class QuoteTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        SKPaymentQueue.default().add(self)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +56,7 @@ class QuoteTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == quotesToShow.count {
             tableView.deselectRow(at: indexPath, animated: true)
             buyPremiumQuotes()
@@ -60,9 +64,28 @@ class QuoteTableViewController: UITableViewController {
     }
 
     private func buyPremiumQuotes() {
-        print(#function)
+        if SKPaymentQueue.canMakePayments() {
+            let paymentRequest = SKMutablePayment()
+            paymentRequest.productIdentifier = productID
+            SKPaymentQueue.default().add(paymentRequest)
+        } else {
+            print("Sorry. You cannot make payments.")
+        }
     }
 
     @IBAction func restorePressed(_ sender: UIBarButtonItem) {
+    }
+}
+
+extension QuoteTableViewController: SKPaymentTransactionObserver {
+
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            if transaction.transactionState == .purchased {
+                print("Transaction successful!")
+            } else if transaction.transactionState == .failed {
+                print("Transaction failed!")
+            }
+        }
     }
 }

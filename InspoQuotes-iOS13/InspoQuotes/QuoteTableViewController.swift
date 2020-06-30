@@ -47,10 +47,20 @@ class QuoteTableViewController: UITableViewController {
             cell.textLabel?.textColor = .white
             cell.accessoryType = .disclosureIndicator
             cell.backgroundColor = .systemBlue
-            cell.selectionStyle = .none
         }
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { 
+        if indexPath.row == quotesToShow.count {
+            tableView.deselectRow(at: indexPath, animated: true)
+            buyPremiumQuotes()
+        }
+    }
+
+    private func buyPremiumQuotes() {
+        print(#function)
     }
 
     @IBAction func restorePressed(_ sender: UIBarButtonItem) {

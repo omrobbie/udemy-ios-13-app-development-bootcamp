@@ -13,6 +13,7 @@
 		AD18A84821285CB000F6BF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD18A84621285CB000F6BF05 /* LaunchScreen.storyboard */; };
 		AD18A85021285D4800F6BF05 /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18A84F21285D4800F6BF05 /* QuoteTableViewController.swift */; };
 		AD18A8532128604C00F6BF05 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD18A8512128604B00F6BF05 /* README.md */; };
+		FC2A910824AAF36000B6E153 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2A910724AAF36000B6E153 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AD18A84921285CB000F6BF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD18A84F21285D4800F6BF05 /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
 		AD18A8512128604B00F6BF05 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FC2A910724AAF36000B6E153 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2A910824AAF36000B6E153 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 				AD18A8512128604B00F6BF05 /* README.md */,
 				AD18A83C21285CAF00F6BF05 /* InspoQuotes */,
 				AD18A83B21285CAF00F6BF05 /* Products */,
+				FC2A910624AAF36000B6E153 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +77,14 @@
 			children = (
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC2A910624AAF36000B6E153 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A910724AAF36000B6E153 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				INFOPLIST_FILE = InspoQuotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,7 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				INFOPLIST_FILE = InspoQuotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -34,10 +34,18 @@ class QuoteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SKPaymentQueue.default().add(self)
+
+        if isPurchased() {
+            showPremiumQuotes()
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quotesToShow.count + 1
+        if isPurchased() {
+            return quotesToShow.count
+        } else {
+            return quotesToShow.count + 1
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,6 +56,7 @@ class QuoteTableViewController: UITableViewController {
             cell.textLabel?.numberOfLines = 0
             cell.textLabel?.textColor = .label
             cell.accessoryType = .none
+            cell.backgroundColor = .systemBackground
         } else {
             cell.textLabel?.text = "Get More Quotes"
             cell.textLabel?.textColor = .white
@@ -80,6 +89,18 @@ class QuoteTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
+    private func isPurchased() -> Bool {
+        let purchaseStatus = UserDefaults.standard.bool(forKey: productID)
+
+        if  purchaseStatus {
+            print("Previously purchased")
+            return true
+        } else {
+            print("Never purchased")
+            return false
+        }
+    }
+
     @IBAction func restorePressed(_ sender: UIBarButtonItem) {
     }
 }
@@ -92,6 +113,7 @@ extension QuoteTableViewController: SKPaymentTransactionObserver {
                 print("Transaction successful!")
                 SKPaymentQueue.default().finishTransaction(transaction)
                 showPremiumQuotes()
+                UserDefaults.standard.set(true, forKey: productID)
             } else if transaction.transactionState == .failed {
                 print("Transaction failed!")
 

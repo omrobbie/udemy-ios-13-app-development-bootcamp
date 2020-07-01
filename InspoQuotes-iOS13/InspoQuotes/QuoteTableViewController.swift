@@ -46,6 +46,8 @@ class QuoteTableViewController: UITableViewController {
         if indexPath.row < quotesToShow.count {
             cell.textLabel?.text = quotesToShow[indexPath.row]
             cell.textLabel?.numberOfLines = 0
+            cell.textLabel?.textColor = .label
+            cell.accessoryType = .none
         } else {
             cell.textLabel?.text = "Get More Quotes"
             cell.textLabel?.textColor = .white
@@ -73,6 +75,11 @@ class QuoteTableViewController: UITableViewController {
         }
     }
 
+    private func showPremiumQuotes() {
+        quotesToShow.append(contentsOf: premiumQuotes)
+        tableView.reloadData()
+    }
+
     @IBAction func restorePressed(_ sender: UIBarButtonItem) {
     }
 }
@@ -84,6 +91,7 @@ extension QuoteTableViewController: SKPaymentTransactionObserver {
             if transaction.transactionState == .purchased {
                 print("Transaction successful!")
                 SKPaymentQueue.default().finishTransaction(transaction)
+                showPremiumQuotes()
             } else if transaction.transactionState == .failed {
                 print("Transaction failed!")
 

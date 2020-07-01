@@ -83,8 +83,15 @@ extension QuoteTableViewController: SKPaymentTransactionObserver {
         for transaction in transactions {
             if transaction.transactionState == .purchased {
                 print("Transaction successful!")
+                SKPaymentQueue.default().finishTransaction(transaction)
             } else if transaction.transactionState == .failed {
                 print("Transaction failed!")
+
+                if let error = transaction.error {
+                    print(error.localizedDescription)
+                }
+
+                SKPaymentQueue.default().finishTransaction(transaction)
             }
         }
     }

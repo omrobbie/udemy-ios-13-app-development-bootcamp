@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var displayLabel: UILabel!
 
-    var isFinishedTypingNumber: Bool = true
+    private var isFinishedTypingNumber: Bool = true
 
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         isFinishedTypingNumber = true

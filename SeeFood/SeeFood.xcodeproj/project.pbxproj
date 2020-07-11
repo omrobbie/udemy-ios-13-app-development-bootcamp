@@ -13,6 +13,7 @@
 		FCDD8E0724B95868003A50D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDD8E0524B95868003A50D8 /* Main.storyboard */; };
 		FCDD8E0924B95869003A50D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDD8E0824B95869003A50D8 /* Assets.xcassets */; };
 		FCDD8E0C24B95869003A50D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDD8E0A24B95869003A50D8 /* LaunchScreen.storyboard */; };
+		FCDD8E1424B9591C003A50D8 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FCDD8E1324B9591C003A50D8 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FCDD8E0824B95869003A50D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCDD8E0B24B95869003A50D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCDD8E0D24B95869003A50D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCDD8E1324B9591C003A50D8 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FCDD8E0824B95869003A50D8 /* Assets.xcassets */,
 				FCDD8E0A24B95869003A50D8 /* LaunchScreen.storyboard */,
 				FCDD8E0D24B95869003A50D8 /* Info.plist */,
+				FCDD8E1324B9591C003A50D8 /* Inceptionv3.mlmodel */,
 			);
 			path = SeeFood;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCDD8E0424B95868003A50D8 /* ViewController.swift in Sources */,
+				FCDD8E1424B9591C003A50D8 /* Inceptionv3.mlmodel in Sources */,
 				FCDD8E0024B95868003A50D8 /* AppDelegate.swift in Sources */,
 				FCDD8E0224B95868003A50D8 /* SceneDelegate.swift in Sources */,
 			);

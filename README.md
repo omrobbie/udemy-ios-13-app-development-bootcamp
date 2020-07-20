@@ -108,3 +108,9 @@ Learn about access type like private, fileprivate, internal, etc. Also about the
 Learn about CoreML and Vision.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/SeeFood/screenshot/preview1.jpg" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/SeeFood/screenshot/preview2.jpg" width=256 />&nbsp;
+
+### 24. What Flower
+Learn about CoreML and Vision. Alamofire dan SwitfyJSON.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/WhatFlower/screenshot/preview1.jpeg" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/WhatFlower/screenshot/preview2.jpeg" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/WhatFlower/screenshot/preview3.jpeg" width=256 />&nbsp;

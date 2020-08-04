@@ -17,8 +17,18 @@ class ViewController: UIViewController {
 
 
     let swifter: Swifter = {
-        let consumerKey = ""
-        let consumerSecret = ""
+        var dict: NSDictionary?
+
+        if let path = Bundle.main.path(forResource: "Keys", ofType: "plist") {
+            dict = NSDictionary(contentsOfFile: path)
+        }
+
+        guard let data = dict else {
+            fatalError("Couldn't found Keys.plist in this project!")
+        }
+
+        let consumerKey = data["consumerKey"] as? String ?? ""
+        let consumerSecret = data["consumerSecret"] as? String ?? ""
         return Swifter(consumerKey: consumerKey, consumerSecret: consumerSecret)
     }()
 

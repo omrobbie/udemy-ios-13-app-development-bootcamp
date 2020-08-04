@@ -15,6 +15,7 @@
 		AD9EC66220FE319B002AE9BF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD9EC66120FE319A002AE9BF /* README.md */; };
 		FCFBB21724D943CE000FD367 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFBB20D24D94383000FD367 /* SwifteriOS.framework */; };
 		FCFBB21824D943CE000FD367 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCFBB20D24D94383000FD367 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCFBB21B24D946B5000FD367 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCFBB21A24D946B5000FD367 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		AD9EC65B20FE2EF7002AE9BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD9EC66120FE319A002AE9BF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FCFBB20424D94383000FD367 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = _OtherFramework/Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
+		FCFBB21A24D946B5000FD367 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				AD9EC65620FE2EF7002AE9BF /* Assets.xcassets */,
 				AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */,
 				AD9EC65B20FE2EF7002AE9BF /* Info.plist */,
+				FCFBB21A24D946B5000FD367 /* Keys.plist */,
 			);
 			path = Twittermenti;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				AD9EC65720FE2EF7002AE9BF /* Assets.xcassets in Resources */,
 				AD9EC66220FE319B002AE9BF /* README.md in Resources */,
 				AD9EC65520FE2EF4002AE9BF /* Main.storyboard in Resources */,
+				FCFBB21B24D946B5000FD367 /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

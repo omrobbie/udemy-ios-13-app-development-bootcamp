@@ -34,6 +34,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        swifter.searchTweet(using: "@Apple", count: 100, success: { (results, metadata) in
+            print(results)
+        }) { (error) in
+            print("Error", error.localizedDescription)
+        }
     }
 
     @IBAction func predictPressed(_ sender: Any) {

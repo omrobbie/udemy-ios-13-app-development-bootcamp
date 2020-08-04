@@ -56,9 +56,17 @@ class ViewController: UIViewController {
             do {
                 let predictions = try self.sentimentClassifier.predictions(inputs: tweets)
 
+                var sentimentScore = 0
+
                 predictions.forEach {
-                    print($0.label)
+                    switch $0.label {
+                    case "Pos": sentimentScore += 1
+                    case "Neg": sentimentScore -= 1
+                    default: break
+                    }
                 }
+
+                print(sentimentScore)
             } catch {
                 print("Error", error.localizedDescription)
             }

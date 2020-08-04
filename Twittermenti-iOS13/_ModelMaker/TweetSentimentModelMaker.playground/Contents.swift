@@ -21,3 +21,9 @@ let metadata = MLModelMetadata(author: "omrobbie", shortDescription: "A model tr
 
 // Save ml model to disk
 try sentimentClassifier.write(to: URL(fileURLWithPath: filePath + "TweetSentimentClassifier.mlmodel"))
+
+
+// Do some test
+try sentimentClassifier.prediction(from: "@Apple is a terrible company!")
+try sentimentClassifier.prediction(from: "I just found the best restaurant ever, and it's @DuckandWaffle")
+try sentimentClassifier.prediction(from: "I think @CocaCola ads are just ok.")

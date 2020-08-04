@@ -8,6 +8,7 @@
 
 import UIKit
 import SwifteriOS
+import CoreML
 
 class ViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sentimentLabel: UILabel!
 
+    let sentimentClassifier = TweetSentimentClassifier()
 
     let swifter: Swifter = {
         var dict: NSDictionary?
@@ -35,8 +37,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var prediction = try! sentimentClassifier.prediction(text: "@Apple is a terrible company!")
+        print(prediction.label)
+        prediction = try! sentimentClassifier.prediction(text: "@Apple is a best company!")
+        print(prediction.label)
+
+
         swifter.searchTweet(using: "@Apple", lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
-            print(results)
+//            print(results)
         }) { (error) in
             print("Error", error.localizedDescription)
         }

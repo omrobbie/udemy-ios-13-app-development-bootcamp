@@ -16,6 +16,7 @@
 		FCFBB21724D943CE000FD367 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFBB20D24D94383000FD367 /* SwifteriOS.framework */; };
 		FCFBB21824D943CE000FD367 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCFBB20D24D94383000FD367 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCFBB21B24D946B5000FD367 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCFBB21A24D946B5000FD367 /* Keys.plist */; };
+		FCFBB21D24D94F0A000FD367 /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FCFBB21C24D94F0A000FD367 /* TweetSentimentClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		AD9EC66120FE319A002AE9BF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FCFBB20424D94383000FD367 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = _OtherFramework/Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
 		FCFBB21A24D946B5000FD367 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		FCFBB21C24D94F0A000FD367 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = TweetSentimentClassifier.mlmodel; path = _ModelMaker/TweetSentimentClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */,
 				AD9EC65B20FE2EF7002AE9BF /* Info.plist */,
 				FCFBB21A24D946B5000FD367 /* Keys.plist */,
+				FCFBB21C24D94F0A000FD367 /* TweetSentimentClassifier.mlmodel */,
 			);
 			path = Twittermenti;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFBB21D24D94F0A000FD367 /* TweetSentimentClassifier.mlmodel in Sources */,
 				AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */,
 				AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */,
 			);

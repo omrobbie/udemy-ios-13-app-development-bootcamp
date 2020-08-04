@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B850A56447531F1B53F22BB /* Pods_Twittermenti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB39E8525F3779A198FBC38 /* Pods_Twittermenti.framework */; };
 		AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */; };
 		AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC65120FE2EF4002AE9BF /* ViewController.swift */; };
 		AD9EC65520FE2EF4002AE9BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9EC65320FE2EF4002AE9BF /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1DB39E8525F3779A198FBC38 /* Pods_Twittermenti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twittermenti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9EC64C20FE2EF4002AE9BF /* Twittermenti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twittermenti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9EC65120FE2EF4002AE9BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		AD9EC65920FE2EF7002AE9BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD9EC65B20FE2EF7002AE9BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD9EC66120FE319A002AE9BF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ADFD7FDDE72C9FE1C6852F7B /* Pods-Twittermenti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twittermenti.debug.xcconfig"; path = "Target Support Files/Pods-Twittermenti/Pods-Twittermenti.debug.xcconfig"; sourceTree = "<group>"; };
+		D650B90EF9E5EB8449B937CF /* Pods-Twittermenti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twittermenti.release.xcconfig"; path = "Target Support Files/Pods-Twittermenti/Pods-Twittermenti.release.xcconfig"; sourceTree = "<group>"; };
 		FCFBB20424D94383000FD367 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = _OtherFramework/Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
 		FCFBB21A24D946B5000FD367 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		FCFBB21C24D94F0A000FD367 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = TweetSentimentClassifier.mlmodel; path = _ModelMaker/TweetSentimentClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
@@ -91,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCFBB21724D943CE000FD367 /* SwifteriOS.framework in Frameworks */,
+				5B850A56447531F1B53F22BB /* Pods_Twittermenti.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +110,7 @@
 				AD9EC64E20FE2EF4002AE9BF /* Twittermenti */,
 				AD9EC64D20FE2EF4002AE9BF /* Products */,
 				FCFBB21624D943CE000FD367 /* Frameworks */,
+				B1E839D22C1A7341991FFBF8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +137,16 @@
 			path = Twittermenti;
 			sourceTree = "<group>";
 		};
+		B1E839D22C1A7341991FFBF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADFD7FDDE72C9FE1C6852F7B /* Pods-Twittermenti.debug.xcconfig */,
+				D650B90EF9E5EB8449B937CF /* Pods-Twittermenti.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FCFBB20524D94383000FD367 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +162,7 @@
 		FCFBB21624D943CE000FD367 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DB39E8525F3779A198FBC38 /* Pods_Twittermenti.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,10 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD9EC65E20FE2EF7002AE9BF /* Build configuration list for PBXNativeTarget "Twittermenti" */;
 			buildPhases = (
+				E4E4B84BDB6F38F2483FDED8 /* [CP] Check Pods Manifest.lock */,
 				AD9EC64820FE2EF4002AE9BF /* Sources */,
 				AD9EC64920FE2EF4002AE9BF /* Frameworks */,
 				AD9EC64A20FE2EF4002AE9BF /* Resources */,
 				FCFBB21924D943CE000FD367 /* Embed Frameworks */,
+				1839C4B70E0473BD9DC3EE2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +282,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1839C4B70E0473BD9DC3EE2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Twittermenti/Pods-Twittermenti-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Twittermenti/Pods-Twittermenti-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Twittermenti/Pods-Twittermenti-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4E4B84BDB6F38F2483FDED8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Twittermenti-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD9EC64820FE2EF4002AE9BF /* Sources */ = {
@@ -415,6 +476,7 @@
 		};
 		AD9EC65F20FE2EF7002AE9BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADFD7FDDE72C9FE1C6852F7B /* Pods-Twittermenti.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -433,6 +495,7 @@
 		};
 		AD9EC66020FE2EF7002AE9BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D650B90EF9E5EB8449B937CF /* Pods-Twittermenti.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

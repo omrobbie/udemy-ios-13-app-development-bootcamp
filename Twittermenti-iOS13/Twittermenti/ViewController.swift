@@ -44,15 +44,24 @@ class ViewController: UIViewController {
 //        print(prediction.label)
 
         swifter.searchTweet(using: "@Apple", lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
-            var tweets = [String]()
+            var tweets = [TweetSentimentClassifierInput]()
 
             for i in 0..<100 {
                 if let tweet = results[i]["full_text"].string {
-                    tweets.append(tweet)
+                    let tweetForClassification = TweetSentimentClassifierInput(text: tweet)
+                    tweets.append(tweetForClassification)
                 }
             }
 
-            print(tweets)
+            do {
+                let predictions = try self.sentimentClassifier.predictions(inputs: tweets)
+
+                predictions.forEach {
+                    print($0.label)
+                }
+            } catch {
+                print("Error", error.localizedDescription)
+            }
         }) { (error) in
             print("Error", error.localizedDescription)
         }

@@ -114,3 +114,9 @@ Learn about CoreML and Vision. Alamofire dan SwitfyJSON.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/WhatFlower/screenshot/preview1.jpeg" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/WhatFlower/screenshot/preview2.jpeg" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/WhatFlower/screenshot/preview3.jpeg" width=256 />&nbsp;
+
+
+### 25. TwitterMenti
+Learn about SwifteriOS, CoreML, SwitfyJSON.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Twittermenti-iOS13/screenshot/preview1.png" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Twittermenti-iOS13/screenshot/preview2.png" width=256 />&nbsp;

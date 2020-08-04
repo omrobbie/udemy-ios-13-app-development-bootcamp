@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sentimentLabel: UILabel!
 
+    let tweetCount = 100
     let sentimentClassifier = TweetSentimentClassifier()
 
     let swifter: Swifter = {
@@ -44,54 +45,66 @@ class ViewController: UIViewController {
 //        print(prediction.label)
     }
 
-    @IBAction func predictPressed(_ sender: Any) {
+    private func fetchTweets() {
         sentimentLabel.text = "🤔"
-        
+
         if let searchText = textField.text {
-            swifter.searchTweet(using: searchText, lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
+            swifter.searchTweet(using: searchText, lang: "en", count: tweetCount, tweetMode: .extended, success: { (results, metadata) in
                 var tweets = [TweetSentimentClassifierInput]()
 
-                for i in 0..<100 {
+                for i in 0..<self.tweetCount {
                     if let tweet = results[i]["full_text"].string {
                         let tweetForClassification = TweetSentimentClassifierInput(text: tweet)
                         tweets.append(tweetForClassification)
                     }
                 }
 
-                do {
-                    let predictions = try self.sentimentClassifier.predictions(inputs: tweets)
-
-                    var sentimentScore = 0
-
-                    predictions.forEach {
-                        switch $0.label {
-                        case "Pos": sentimentScore += 1
-                        case "Neg": sentimentScore -= 1
-                        default: break
-                        }
-                    }
-
-                    if sentimentScore > 20 {
-                        self.sentimentLabel.text = "😍"
-                    } else if sentimentScore > 10 {
-                        self.sentimentLabel.text = "😁"
-                    } else if sentimentScore > 0 {
-                        self.sentimentLabel.text = "🙂"
-                    } else if sentimentScore == 0 {
-                        self.sentimentLabel.text = "😐"
-                    } else if sentimentScore > -10 {
-                        self.sentimentLabel.text = "😟"
-                    } else if sentimentScore > -20 {
-                        self.sentimentLabel.text = "😡"
-                    } else {
-                        self.sentimentLabel.text = "🤮"
-                    }
-                } catch {
-                    print("Error", error.localizedDescription)
-                }
+                self.makePrediction(with: tweets)
             }) { (error) in
                 print("Error", error.localizedDescription)
             }
         }
+    }
+
+    private func makePrediction(with tweets: [TweetSentimentClassifierInput]) {
+        do {
+            let predictions = try self.sentimentClassifier.predictions(inputs: tweets)
+
+            var sentimentScore = 0
+
+            predictions.forEach {
+                switch $0.label {
+                case "Pos": sentimentScore += 1
+                case "Neg": sentimentScore -= 1
+                default: break
+                }
+            }
+
+            updateUI(with: sentimentScore)
+        } catch {
+            print("Error", error.localizedDescription)
+        }
+    }
+
+    private func updateUI(with sentimentScore: Int) {
+        if sentimentScore > 20 {
+            self.sentimentLabel.text = "😍"
+        } else if sentimentScore > 10 {
+            self.sentimentLabel.text = "😁"
+        } else if sentimentScore > 0 {
+            self.sentimentLabel.text = "🙂"
+        } else if sentimentScore == 0 {
+            self.sentimentLabel.text = "😐"
+        } else if sentimentScore > -10 {
+            self.sentimentLabel.text = "😟"
+        } else if sentimentScore > -20 {
+            self.sentimentLabel.text = "😡"
+        } else {
+            self.sentimentLabel.text = "🤮"
+        }
+    }
+
+    @IBAction func predictPressed(_ sender: Any) {
+        fetchTweets()
     }
 }

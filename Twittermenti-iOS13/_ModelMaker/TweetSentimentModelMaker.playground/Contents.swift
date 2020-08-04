@@ -18,3 +18,6 @@ let evaluationMetrics = sentimentClassifier.evaluation(on: trainingData, textCol
 let evaluationAccuracy = (1.0 - evaluationMetrics.classificationError) * 100
 
 let metadata = MLModelMetadata(author: "omrobbie", shortDescription: "A model trained to classify sentiment on Tweets", license: "open", version: "1.0")
+
+// Save ml model to disk
+try sentimentClassifier.write(to: URL(fileURLWithPath: filePath + "TweetSentimentClassifier.mlmodel"))

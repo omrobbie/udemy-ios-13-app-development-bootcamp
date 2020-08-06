@@ -22,17 +22,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        let scene = SCNScene(named: "art.scnassets/ship.scn")!
 //        sceneView.scene = scene
 
-        let cube = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.01)
-        let material = SCNMaterial()
-        material.diffuse.contents = UIColor.red
-        cube.materials = [material]
-
-        let node = SCNNode()
-        node.position = SCNVector3(x: 0, y: 0.1, z: -0.5)
-        node.geometry = cube
-
-        sceneView.scene.rootNode.addChildNode(node)
-        sceneView.autoenablesDefaultLighting = true
+        let cube = cubeGeometry()
+        addNode(geometry: cube)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,5 +47,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         print("Image Tracking is supported: \(ARImageTrackingConfiguration.isSupported)")
         print("Object Scanning is supported: \(ARObjectScanningConfiguration.isSupported)")
         print("Positional Tracking is supported: \(ARPositionalTrackingConfiguration.isSupported)")
+    }
+
+    private func configMaterials(contents: Any) -> [SCNMaterial] {
+        let material = SCNMaterial()
+        material.diffuse.contents = contents
+        return [material]
+    }
+
+    private func cubeGeometry() -> SCNGeometry {
+        let cube = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.01)
+        let material = configMaterials(contents: UIColor.red)
+        cube.materials = material
+        return cube
+    }
+
+    private func addNode(geometry: SCNGeometry) {
+        let node = SCNNode()
+        node.position = SCNVector3(x: 0, y: 0.1, z: -0.5)
+        node.geometry = geometry
+
+        sceneView.scene.rootNode.addChildNode(node)
+        sceneView.autoenablesDefaultLighting = true
     }
 }

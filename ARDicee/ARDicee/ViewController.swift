@@ -99,10 +99,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     private func diceNode(_ hitResult: ARHitTestResult) {
         let diceScene = SCNScene(named: "art.scnassets/diceCollada.scn")!
-        let diceNode = diceScene.rootNode.childNode(withName: "Dice", recursively: true)
+        let diceNode = diceScene.rootNode.childNode(withName: "Dice", recursively: true)!
         let pos = hitResult.worldTransform.columns.3
-        diceNode?.position = SCNVector3(x: pos.x, y: pos.y, z: pos.z)
-        sceneView.scene.rootNode.addChildNode(diceNode!)
+        diceNode.position = SCNVector3(
+            x: pos.x,
+            y: pos.y + diceNode.boundingSphere.radius,
+            z: pos.z
+        )
+        sceneView.scene.rootNode.addChildNode(diceNode)
     }
 
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {

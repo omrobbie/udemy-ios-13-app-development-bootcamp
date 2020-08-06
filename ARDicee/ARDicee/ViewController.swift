@@ -26,10 +26,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)
+
+        checkSupportedConfiguration()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
+    }
+
+    private func checkSupportedConfiguration() {
+        print("Session is supported: \(ARConfiguration.isSupported)")
+        print("World Traking is supported: \(ARWorldTrackingConfiguration.isSupported)")
+        print("Body Tracking is supported: \(ARBodyTrackingConfiguration.isSupported)")
+        print("Face Tracking is supported: \(ARFaceTrackingConfiguration.isSupported)")
+        print("Image Tracking is supported: \(ARImageTrackingConfiguration.isSupported)")
+        print("Object Scanning is supported: \(ARObjectScanningConfiguration.isSupported)")
+        print("Positional Tracking is supported: \(ARPositionalTrackingConfiguration.isSupported)")
     }
 }

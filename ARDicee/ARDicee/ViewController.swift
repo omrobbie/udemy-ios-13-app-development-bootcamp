@@ -28,7 +28,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        let object = sphereGeometry()
 //        addNode(geometry: object)
 
-        diceNode()
+//        diceNode()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,8 +60,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let touchLocation = touch.location(in: sceneView)
             let results = sceneView.hitTest(touchLocation, types: .existingPlaneUsingExtent)
 
-            if !results.isEmpty {
-                print("Touch the plane")
+            if let hitResult = results.first {
+                diceNode(hitResult)
             } else {
                 print("Touch somewhere else")
             }
@@ -97,10 +97,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.autoenablesDefaultLighting = true
     }
 
-    private func diceNode() {
+    private func diceNode(_ hitResult: ARHitTestResult) {
         let diceScene = SCNScene(named: "art.scnassets/diceCollada.scn")!
         let diceNode = diceScene.rootNode.childNode(withName: "Dice", recursively: true)
-        diceNode?.position = SCNVector3(x: 0, y: 0, z: -0.1)
+        let pos = hitResult.worldTransform.columns.3
+        diceNode?.position = SCNVector3(x: pos.x, y: pos.y, z: pos.z)
         sceneView.scene.rootNode.addChildNode(diceNode!)
     }
 

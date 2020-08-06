@@ -156,6 +156,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
 
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        rollAll()
+    }
+
     @IBAction func btnRollAgainTapped(_ sender: Any) {
         rollAll()
     }

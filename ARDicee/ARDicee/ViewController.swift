@@ -13,6 +13,8 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+
+    var diceArray = [SCNNode]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,10 +110,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         )
         sceneView.scene.rootNode.addChildNode(diceNode)
 
+        diceArray.append(diceNode)
+        roll(dice: diceNode)
+    }
+
+    private func rollAll() {
+        if !diceArray.isEmpty {
+            for dice in diceArray {
+                roll(dice: dice)
+            }
+        }
+    }
+
+    private func roll(dice: SCNNode) {
         let randomX = Float(arc4random_uniform(4) + 1) * (Float.pi/2)
         let randomZ = Float(arc4random_uniform(4) + 1) * (Float.pi/2)
 
-        diceNode.runAction(
+        dice.runAction(
             SCNAction.rotateBy(
                 x: CGFloat(randomX * 5),
                 y: 0,

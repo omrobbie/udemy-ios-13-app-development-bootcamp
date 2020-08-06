@@ -55,6 +55,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         print("Positional Tracking is supported: \(ARPositionalTrackingConfiguration.isSupported)")
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let touchLocation = touch.location(in: sceneView)
+            let results = sceneView.hitTest(touchLocation, types: .existingPlaneUsingExtent)
+
+            if !results.isEmpty {
+                print("Touch the plane")
+            } else {
+                print("Touch somewhere else")
+            }
+        }
+    }
+
     private func configMaterials(contents: Any) -> [SCNMaterial] {
         let material = SCNMaterial()
         material.diffuse.contents = contents
@@ -103,7 +116,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let gridMaterial = SCNMaterial()
             gridMaterial.diffuse.contents = UIImage(named: "art.scnassets/grid.png")
             plane.materials = [gridMaterial]
-            planeNode.geometry = plane   
+            planeNode.geometry = plane
 
             node.addChildNode(planeNode)
         } else {

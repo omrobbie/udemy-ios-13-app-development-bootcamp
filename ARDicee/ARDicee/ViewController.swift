@@ -32,6 +32,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
         sceneView.session.run(configuration)
 
         checkSupportedConfiguration()
@@ -86,5 +87,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let diceNode = diceScene.rootNode.childNode(withName: "Dice", recursively: true)
         diceNode?.position = SCNVector3(x: 0, y: 0, z: -0.1)
         sceneView.scene.rootNode.addChildNode(diceNode!)
+    }
+
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        if anchor is ARPlaneAnchor {
+            print("Plane detected!")
+        } else {
+            return
+        }
     }
 }

@@ -67,7 +67,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let material = configMaterials(contents: UIImage(named: "art.scnassets/moon.jpg")!)
         sphere.materials = material
         return sphere
-    }
+    } 
 
     private func addNode(geometry: SCNGeometry) {
         let node = SCNNode()

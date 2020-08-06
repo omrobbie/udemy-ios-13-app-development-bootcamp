@@ -47,6 +47,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
 
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        if anchor is ARPlaneAnchor {
+            let planeAnchor = anchor as! ARPlaneAnchor
+            let plane = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
+
+            let planeNode = SCNNode()
+            planeNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
+            planeNode.transform = SCNMatrix4MakeRotation(-Float.pi/2, 1, 0, 0)
+
+            let gridMaterial = SCNMaterial()
+            gridMaterial.diffuse.contents = UIImage(named: "art.scnassets/grid.png")
+            plane.materials = [gridMaterial]
+            planeNode.geometry = plane
+
+            node.addChildNode(planeNode)
+        } else {
+            return
+        }
+    }
+
     private func checkSupportedConfiguration() {
         print("Session is supported: \(ARConfiguration.isSupported)")
         print("World Traking is supported: \(ARWorldTrackingConfiguration.isSupported)")
@@ -68,6 +88,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 print("Touch somewhere else")
             }
         }
+    }
+
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        rollAll()
     }
 
     private func configMaterials(contents: Any) -> [SCNMaterial] {
@@ -134,30 +158,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 duration: 0.5
             )
         )
-    }
-
-    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        if anchor is ARPlaneAnchor {
-            let planeAnchor = anchor as! ARPlaneAnchor
-            let plane = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
-
-            let planeNode = SCNNode()
-            planeNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
-            planeNode.transform = SCNMatrix4MakeRotation(-Float.pi/2, 1, 0, 0)
-
-            let gridMaterial = SCNMaterial()
-            gridMaterial.diffuse.contents = UIImage(named: "art.scnassets/grid.png")
-            plane.materials = [gridMaterial]
-            planeNode.geometry = plane
-
-            node.addChildNode(planeNode)
-        } else {
-            return
-        }
-    }
-
-    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        rollAll()
     }
 
     @IBAction func btnRollAgainTapped(_ sender: Any) {

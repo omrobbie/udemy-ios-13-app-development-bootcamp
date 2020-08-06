@@ -21,9 +21,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
 //        let scene = SCNScene(named: "art.scnassets/ship.scn")!
 //        sceneView.scene = scene
+        
+// create moon from sphere geometry
+//        let object = sphereGeometry()
+//        addNode(geometry: object)
 
-        let object = sphereGeometry()
-        addNode(geometry: object)
+        diceNode()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,7 +70,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let material = configMaterials(contents: UIImage(named: "art.scnassets/moon.jpg")!)
         sphere.materials = material
         return sphere
-    } 
+    }
 
     private func addNode(geometry: SCNGeometry) {
         let node = SCNNode()
@@ -76,5 +79,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         sceneView.scene.rootNode.addChildNode(node)
         sceneView.autoenablesDefaultLighting = true
+    }
+
+    private func diceNode() {
+        let diceScene = SCNScene(named: "art.scnassets/diceCollada.scn")!
+        let diceNode = diceScene.rootNode.childNode(withName: "Dice", recursively: true)
+        diceNode?.position = SCNVector3(x: 0, y: 0, z: -0.1)
+        sceneView.scene.rootNode.addChildNode(diceNode!)
     }
 }

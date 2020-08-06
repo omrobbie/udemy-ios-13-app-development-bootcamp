@@ -163,4 +163,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func btnRollAgainTapped(_ sender: Any) {
         rollAll()
     }
+
+    @IBAction func btnRemoveAllDiceTapped(_ sender: Any) {
+        if !diceArray.isEmpty {
+            for dice in diceArray {
+                dice.removeFromParentNode()
+            }
+        }
+    }
 }

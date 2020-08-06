@@ -155,4 +155,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             return
         }
     }
+
+    @IBAction func btnRollAgainTapped(_ sender: Any) {
+        rollAll()
+    }
 }

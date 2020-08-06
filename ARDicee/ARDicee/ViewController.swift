@@ -22,8 +22,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        let scene = SCNScene(named: "art.scnassets/ship.scn")!
 //        sceneView.scene = scene
 
-        let cube = cubeGeometry()
-        addNode(geometry: cube)
+        let object = sphereGeometry()
+        addNode(geometry: object)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +60,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let material = configMaterials(contents: UIColor.red)
         cube.materials = material
         return cube
+    }
+
+    private func sphereGeometry() -> SCNGeometry {
+        let sphere = SCNSphere(radius: 0.2)
+        let material = configMaterials(contents: UIImage(named: "art.scnassets/moon.jpg")!)
+        sphere.materials = material
+        return sphere
     }
 
     private func addNode(geometry: SCNGeometry) {

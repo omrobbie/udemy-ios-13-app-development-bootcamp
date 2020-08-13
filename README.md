@@ -129,3 +129,7 @@ Learn about SceneKit, ARKit. Creating spin animation dice on the flat plane like
 ### 27. AR Ruler
 Learn about SceneKit, ARKit. Calculate between 2 dots.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/AR%20Ruler/screenshot/preview.gif" width=256 />&nbsp;
+
+### 28. Poke3D
+Learn about SceneKit, ARKit. Add 3D assets following the cards.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Poke3D/screenshot/preview.gif" width=256 />&nbsp;

@@ -133,3 +133,7 @@ Learn about SceneKit, ARKit. Calculate between 2 dots.<br>
 ### 28. Poke3D
 Learn about SceneKit, ARKit. Add 3D assets following the cards.<br>
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/Poke3D/screenshot/preview.gif" width=256 />&nbsp;
+
+### 29. Magic Paper
+Learn about SceneKit, ARKit. Play video on the card.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/MagicPaper/screenshot/preview.gif" width=256 />&nbsp;

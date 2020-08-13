@@ -21,7 +21,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let configuration = ARWorldTrackingConfiguration()
+        let configuration = ARImageTrackingConfiguration()
+
+        if let imageToTrack = ARReferenceImage.referenceImages(inGroupNamed: "Cards", bundle: Bundle.main) {
+            configuration.trackingImages = imageToTrack
+            configuration.maximumNumberOfTrackedImages = 1
+            print("Images successfully added!")
+        }
+
         sceneView.session.run(configuration)
     }
 

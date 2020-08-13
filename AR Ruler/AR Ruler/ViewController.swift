@@ -42,6 +42,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 
     private func addDot(at hitResult: ARHitTestResult) {
-        print(#function)
+        let dotGeometry = SCNSphere(radius: 0.005)
+        let material = SCNMaterial()
+        material.diffuse.contents = UIColor.red
+
+        dotGeometry.materials = [material]
+
+        let dotNode = SCNNode(geometry: dotGeometry)
+        let pos = hitResult.worldTransform.columns.3
+        dotNode.position = SCNVector3(x: pos.x, y: pos.y, z: pos.z)
+
+        sceneView.scene.rootNode.addChildNode(dotNode)
     }
 }

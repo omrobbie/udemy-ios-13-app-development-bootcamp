@@ -36,4 +36,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
     }
+
+    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        let node = SCNNode()
+
+        if let imageAnchor = anchor as? ARImageAnchor {
+            let size = imageAnchor.referenceImage.physicalSize
+            let plane = SCNPlane(width: size.width, height: size.height)
+            let planeNode = SCNNode(geometry: plane)
+            planeNode.eulerAngles.x = -.pi / 2
+            node.addChildNode(planeNode)
+        }
+
+        return node
+    }
 }

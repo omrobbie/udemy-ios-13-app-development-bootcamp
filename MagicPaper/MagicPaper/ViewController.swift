@@ -42,9 +42,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let node = SCNNode()
 
         if let imageAnchor = anchor as? ARImageAnchor {
+            let videoNode = SKVideoNode(fileNamed: "crying.mp4")
+            videoNode.play()
+
+            let videoScene = SKScene(size: CGSize(width: 640, height: 360))
+            videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
+            videoNode.yScale = -1.0
+            videoScene.addChild(videoNode)
+
             let size = imageAnchor.referenceImage.physicalSize
             let plane = SCNPlane(width: size.width, height: size.height)
-            plane.firstMaterial?.diffuse.contents = UIColor(white: 1.0, alpha: 0.5)
+            plane.firstMaterial?.diffuse.contents = videoScene
 
             let planeNode = SCNNode(geometry: plane)
             planeNode.eulerAngles.x = -.pi / 2

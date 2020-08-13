@@ -13,6 +13,7 @@
 		FC95796D24E537A3000E9488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC95796B24E537A3000E9488 /* Main.storyboard */; };
 		FC95796F24E537A4000E9488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC95796E24E537A4000E9488 /* Assets.xcassets */; };
 		FC95797224E537A4000E9488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC95797024E537A4000E9488 /* LaunchScreen.storyboard */; };
+		FC95797A24E53CE3000E9488 /* crying.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FC95797924E53993000E9488 /* crying.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FC95796E24E537A4000E9488 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC95797124E537A4000E9488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC95797324E537A4000E9488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC95797924E53993000E9488 /* crying.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = crying.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FC95796E24E537A4000E9488 /* Assets.xcassets */,
 				FC95797024E537A4000E9488 /* LaunchScreen.storyboard */,
 				FC95797324E537A4000E9488 /* Info.plist */,
+				FC95797924E53993000E9488 /* crying.mp4 */,
 			);
 			path = MagicPaper;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC95797A24E53CE3000E9488 /* crying.mp4 in Resources */,
 				FC95796824E537A3000E9488 /* art.scnassets in Resources */,
 				FC95797224E537A4000E9488 /* LaunchScreen.storyboard in Resources */,
 				FC95796F24E537A4000E9488 /* Assets.xcassets in Resources */,

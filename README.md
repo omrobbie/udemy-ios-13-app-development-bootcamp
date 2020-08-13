@@ -125,3 +125,7 @@ Learn about SceneKit, ARKit. Creating spin animation dice on the flat plane like
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/ARDicee/screenshot/preview1.jpeg" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/ARDicee/screenshot/preview2.jpeg" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/ARDicee/screenshot/preview3.gif" width=256 />&nbsp;
+
+### 27. AR Ruler
+Learn about SceneKit, ARKit. Calculate between 2 dots.<br>
+<img src="https://github.com/omrobbie/udemy-ios-13-app-development-bootcamp/blob/master/AR%20Ruler/screenshot/preview.gif" width=256 />&nbsp;

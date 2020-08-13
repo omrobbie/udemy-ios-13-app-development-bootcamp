@@ -17,6 +17,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
+        sceneView.autoenablesDefaultLighting = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +50,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             planeNode.eulerAngles.x = -.pi / 2
 
             node.addChildNode(planeNode)
+
+            if let pokeScene = SCNScene(named: "art.scnassets/skull.scn") {
+                if let pokeNode = pokeScene.rootNode.childNodes.first {
+                    planeNode.addChildNode(pokeNode)
+                }
+            }
         }
 
         return node

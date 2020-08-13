@@ -30,4 +30,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touchLocation = touches.first?.location(in: sceneView) {
+            let hitTestResult = sceneView.hitTest(touchLocation, types: .featurePoint)
+
+            if let hitResult = hitTestResult.first {
+                addDot(at: hitResult)
+            }
+        }
+    }
+
+    private func addDot(at hitResult: ARHitTestResult) {
+        print(#function)
+    }
 }
